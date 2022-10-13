@@ -244,6 +244,6 @@
 
 
 
-> 参考文本：
+参考文本：
 > * [Changelog from DreamAssemblerXXL](https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/releases/changelogs/changelog%20from%202.2.0.0%20to%202.2.3.md)
 > * All pull requests and commits from [GTNewHorizons repositories](https://github.com/GTNewHorizons)
