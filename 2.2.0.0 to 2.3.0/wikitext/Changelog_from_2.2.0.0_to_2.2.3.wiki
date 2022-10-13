@@ -320,6 +320,8 @@ __TOC__
 * 更新了默认服务器列表，加入了Zvezdolet GTNH 2.0和Zvezdolet GTNH Hardcore两个服务器。（by Ethryan [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11513 相关pr]）
 * 修复了水晶缠绕宇宙中子法杖无法合成的bug。（by wohaopa [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11515 相关pr]）
 
-<blockquote>参考文本： * [https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/releases/changelogs/changelog%20from%202.2.0.0%20to%202.2.3.md Changelog from DreamAssemblerXXL] * All pull requests and commits from [https://github.com/GTNewHorizons GTNewHorizons repositories]
+<blockquote>参考文本： 
+* [https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/releases/changelogs/changelog%20from%202.2.0.0%20to%202.2.3.md Changelog from DreamAssemblerXXL] 
+* All pull requests and commits from [https://github.com/GTNewHorizons GTNewHorizons repositories]
 </blockquote>
 <references />
