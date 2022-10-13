@@ -1,6 +1,10 @@
 # 2.2.0.0 到 2.2.3 更新内容
 
-## Mods文件变动
+关于GTNH版本号格式的变动：以后GTNH的版本号将会变为三位数字，意为：<稳定版本号>.<重要更新版本号>.<修复版本号>。[^1] 
+
+[^1]: "I changed it because we want to use 3 digits from now on: stable.major-change.fix." [by DreamMasterXXL](https://discord.com/channels/181078474394566657/401118216228831252/1027282245477736530)
+
+## Mod文件变动
 * 版本格式变动的Mod
   * OpenPrinter：改为-GTNH版本。
 * 移除的Mod
@@ -10,7 +14,7 @@
 
 （注：移除的原因，见下面BetterQuesting的更新内容。）
 
-## Mods更新
+## Mod更新
 
 ### AE2FluidCraft-Rework（AE2FC）
 * 版本号：1.0.18-GTNH → 1.0.22-GTNH
@@ -24,12 +28,12 @@
 
 ### Applied-Energistics-2-Unofficial（AE2）
 * 版本号：rv3-beta-107-GTNH → rv3-beta-111-GTNH
-* 加入了P2P通道-ME接口，又称为“镜像接口”，可以将ME接口的内容“复制”到多个P2P输出端口。[^1]（by Kuba6000 [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/183) [discord前瞻视频](https://discord.com/channels/181078474394566657/295669878222880769/1026078863794634782)）
+* 加入了P2P通道-ME接口，又称为“镜像接口”，可以将ME接口的内容“复制”到多个P2P输出端口。[^2]（by kuba6000 [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/183) [discord特性前瞻](https://discord.com/channels/181078474394566657/295669878222880769/1026078863794634782)）
 * 修复了流体处理样板终端设置的单格物品数量超过127时会变为负数的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/188)）
 * ME存储总线设置界面的虚拟物品槽位中放置的物品，其格子右下角不再显示数量"1"。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/188)）
 * "toggle focus"（切换焦点）的默认键位改为未绑定。（by miozune [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/189)）
 
-[^1]: 目前只有物品版本的P2P通道-ME接口，流体版本会在以后更新中加入。
+[^2]: 目前只有物品版本的P2P通道-ME接口，流体版本会在以后更新中加入。
 
 ### Bartworks
 * 版本号：0.5.86 → 0.5.90
@@ -121,7 +125,7 @@
 * 修复了最大堆叠小于64的物品在作物管理器中可以超限堆叠的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/391)）
 * 修复了硫化铜\(II\)和氰化钠没有大化反合成配方的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/392)）
 * 更新俄语语言文件。（by Eldrinn-Elantey [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/390)）
-* 新加入巨型合金冶炼炉，是合金冶炼炉的升级版。（by MadMan310 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/394)）
+* 新加入巨型合金冶炼炉，是合金冶炼炉的升级版。（by MadMan310 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/394) [discord特性前瞻](https://discord.com/channels/181078474394566657/295669878222880769/1028718667275440249)）
   * UV阶段可以制造。
   * 最大256并行。
   * 有基于线圈等级的速度加成，为线圈等级/130，计算结果按千分位四舍五入，使用时永恒线圈达到10%的最大加成。结构中也可以使用冶炼炉线圈方块，此时没有速度加成。
@@ -155,7 +159,9 @@
 
 ### KekzTech
 * 版本号：0.6.15 → 0.6.16
-* 修改了兰波顿超级电容库计算平均输入输出的方式。（by TrainerSnow [相关pr](https://github.com/GTNewHorizons/KekzTech/pull/43)）
+* 修改了兰波顿超级电容库计算平均输入输出的方式。[^3]（by TrainerSnow [相关pr](https://github.com/GTNewHorizons/KekzTech/pull/43)）
+
+[^3]: 会导致进入存档崩溃，解决方法为手动更新TecTech。
 
 ### KubaTech
 * 版本号：0.5.10 → 0.5.11
