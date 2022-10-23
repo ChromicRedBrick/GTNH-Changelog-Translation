@@ -161,7 +161,7 @@
 * 版本号：0.6.15 → 0.6.16
 * 修改了兰波顿超级电容库计算平均输入输出的方式。[^3]（by TrainerSnow [相关pr](https://github.com/GTNewHorizons/KekzTech/pull/43)）
 
-[^3]: 会导致进入存档崩溃，解决方法为手动更新TecTech。
+[^3]: 会导致进入存档崩溃，解决方法为手动更新KekzTech。
 
 ### KubaTech
 * 版本号：0.5.10 → 0.5.11
