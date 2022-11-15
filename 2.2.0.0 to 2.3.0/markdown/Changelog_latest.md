@@ -37,11 +37,35 @@
 [^2]: 例如编写样板：4橡木木板+4燧石→1工作台，开启“启用替换”功能，此时ME网络内没有任何种类的木板，但是有白桦木原木，同时也有1白桦木原木→4白桦木木板的合成样板。此时进行合成时，终端便会使用白桦木原木合成白桦木木板，再合成工作台。此前终端只会调取网络内已有的同矿辞物品，不够时不会请求合成。
 
 ### Bartworks
-* 版本号：0.5.86 → 0.5.90
-* 修正了重复的本地化key。（by iouter [相关pr](https://github.com/GTNewHorizons/bartworks/pull/207)）
-* 加入了两种新等级的强化硼玻璃方块。（by BlueWeabo [相关pr](https://github.com/GTNewHorizons/bartworks/pull/208)）
-  * 无尽强化硼玻璃方块：UIV等级玻璃；
-  * 超时空金属强化硼玻璃方块：UMV等级玻璃。
+* 版本号：0.5.90 → 0.5.111
+* 修复了细菌培养缸内部显示的流体方块没有lang key的问题。（by Quarri6343 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/209)）
+* 修复了极限工业温室不支持多输入仓供水的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/210)）
+* 提高了极限工业温室设置模式的输入速度。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/210)）
+* 加入了封装贴片电感的合成配方。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/bartworks/pull/212)）
+* 加入了Bartworks材料的箔形式。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/bartworks/pull/213)）
+* 修复了风车并行数计算错误导致的物品复制bug。（by iouter [相关pr](https://github.com/GTNewHorizons/bartworks/pull/214)）
+* 将合成配方中使用的0号电路板改为1号。（by miozune [相关pr](https://github.com/GTNewHorizons/bartworks/pull/215)）
+* 修复了[pr#210](https://github.com/GTNewHorizons/bartworks/pull/210)意外导致的物品复制bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/216)）
+* 修复了风车输出物品没有正确分割的bug。（by iouter [相关pr](https://github.com/GTNewHorizons/bartworks/pull/217)）
+* 加入了使用电动聚爆压缩机制造浓缩铀、钍、钚的新配方。（by GDCloudstrike [相关pr](https://github.com/GTNewHorizons/bartworks/pull/218)）
+* 修复了电路元件矿辞化导致部分电路装配线配方（主要是集成逻辑电路）无法生成的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/bartworks/pull/219)）
+* 修正了极限工业温室的结构tooltip文本。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/221)）
+* 为巨型工业高炉、巨型真空冷冻机、巨型化学反应釜、巨型蒸馏塔加入了批处理模式，剪线钳Shift+右键切换。该模式旨在降低延迟。[^3]（by S4mpsa [相关pr](https://github.com/GTNewHorizons/bartworks/pull/225)）
+* 修复了铱锇合金涡轮配方被钌铱合金错误替代的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/bartworks/pull/226)）
+* 修复了硫酸钠粉电解配方会生成液态钠而不是钠粉的问题。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/bartworks/pull/227)）
+* 修改了Bartworks材料的流体固化配方机制，现在默认情况下不会生成齿轮、螺栓、转子的流体固化配方，并且将配方生成分成了两个独立的选项，"addMetalCraftingSolidifierRecipes"会生成杆、板的流体固化配方，"addMetaSolidifierRecipes"会生成齿轮、螺丝、螺栓、环等的流体固化配方。（by Elisis [相关pr](https://github.com/GTNewHorizons/bartworks/pull/228)）
+* 修复了存储输入总线（ME）会在机器内部的一格内输入超过一组种子的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/230)）
+* 将Bartworks生成线缆二极管及其配方的最高等级限制为UV。[^4]（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/231)）
+* 修复了极限工业温室不支持云母草（Micadia）的问题。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/232)）
+* 修复了IC2模式下作物产出计算错误的bug（略微nerf了IC2模式）。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/232)）
+* 取消了盐根种子在极限工业温室中的湿度判定。盐根产量现在会正确地随种子G值增加而增加。[^5]（by xSkewer [相关pr](https://github.com/GTNewHorizons/bartworks/pull/233)）
+* 修复了LuV部分使用到铂线材料的配方生成错误的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/bartworks/pull/234)）
+* 修复了氯化钙流体产出钙过多的问题，将1000mB氯化钙→3氯化钙粉改为1000mB氯化钙→1氯化钙粉。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/bartworks/pull/236)）
+* 修复了电路装配线和风车结构判定相关的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/237)）
+
+[^3]: 批处理模式可以为配方加上一个由输入原料量决定的并行系数，这个系数最大为128。最终的输入、输出为原最大并行量\*并行系数，同时配方处理时间也为原时间\*并行系数。批处理模式可以极大降低处理阵列造成的延迟，但不会增加其生产效率。
+[^4]: 因为UHV+的线缆和线缆二极管配方在GTNewHorizonsCoreMod中定义，在Bartworks中不限制可能会导致配方问题。
+[^5]: 湿度判定会导致盐根产量与种子G值的关系并不是单调递增的，而是在G=11或12时产量取得最大值。
 
 ### BetterQuesting（更好的任务）
 * 版本号：3.0.367-GTNH → 3.1.0-GTNH
