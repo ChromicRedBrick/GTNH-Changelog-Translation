@@ -7,23 +7,34 @@
 ## Mod更新
 
 ### AE2FluidCraft-Rework（AE2FC）
-* 版本号：1.0.18-GTNH → 1.0.22-GTNH
-* 合成计划预览界面的物品现在支持添加/删除NEI书签。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/20)）
-* 精简了asm。（by GlodBlock [相关commit](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/commit/989cd173fbe4ef978862a1c10ff772cf43c33e50)）
-* 原材料缓存仓现在有了实时显示流体储量的tooltip，鼠标移动到相应流体上可查看。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/20)）
-* AE2FC的相关方块现在支持EIO流体导管。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/21)）
-* AE2FC的ME流体输出总线现在支持合成卡。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/22)）
-* 修复了当原材料不足时，合成计划显示的字节占用不正确的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/23)）
-* 修复了ME流体解包器复制流体的bug（当ME流体存储总线所接仓室容量小于解包器内流体片的流体量时，不会消耗流体。）（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/23)）
+* 版本号：1.0.22-GTNH → 1.0.32-GTNH
+* 修复了ME增广流体样板终端保存8种物品输出的配方会出现错误的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/25)）
+* 修复了极端情况下流体样板编码可能会导致ArrayIndexOutOfBoundsException的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/26)）
+* 为流体存储元件加入了显示过滤流体种类的tooltip。（by dipo33 [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/27)）
+* 新增（AE2FC版）ME流体终端。支持显示每种最高long max量的流体。（by asdflj [相关pr1](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/28) [相关pr2](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/29) [相关pr3](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/30)）
+* 阻挡模式支持流体p2p。（by guineawheek [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/31)）
+* 修复了一个导致二合一接口无限输出流体的bug。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/32)）
+* 在流体样板终端界面Shift+左键物品栏中的样板，现在会自动将其放到样板输出格，而不是放入ME网络库存内。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/33)）
+* 加入了ME缓存指令器（ME Level Maintainer），用于让ME网络中某个物品保持在一定数量之内。支持开放式电脑（OC）相关控制。[^1]（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/36)）
+* 大大提高了ME-IO端口输入/输出ME流体元件中流体的速度。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/36)）
+* 可以将物品拖到AE2FC终端顶部搜索栏上，自动用物品名填充搜索栏（与原版AE2相同）。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/36)）
+* AE2FC终端顶部搜索栏现在支持NEI搜索历史（需要将搜索模式调为NEI同步，使用Ctrl+鼠标滚轮调整历史条目）。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/36)）
+* 修复了ME流体样板终端中Shift+鼠标左键双倍样板输入/输出对流体包不生效的bug。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/36)）
+* 修复了格雷化（魔改）的AE2FC流体元件合成配方失效的bug。（by OneEyeMaker [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/37)）
+
+[^1]: 源自懒人AE2（Lazy AE2）。
 
 ### Applied-Energistics-2-Unofficial（AE2）
-* 版本号：rv3-beta-107-GTNH → rv3-beta-111-GTNH
-* 加入了P2P通道-ME接口，又称为“镜像接口”，可以将ME接口的内容“复制”到多个P2P输出端口。[^2]（by kuba6000 [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/183) [discord特性前瞻](https://discord.com/channels/181078474394566657/295669878222880769/1026078863794634782)）
-* 修复了流体处理样板终端设置的单格物品数量超过127时会变为负数的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/188)）
-* ME存储总线设置界面的虚拟物品槽位中放置的物品，其格子右下角不再显示数量"1"。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/188)）
-* "toggle focus"（切换焦点）的默认键位改为未绑定。（by miozune [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/189)）
+* 版本号：rv3-beta-111-GTNH → rv3-beta-118-GTNH
+* 改善了禁用频道时ME网络的性能表现。（by xyqyear [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/190)）
+* 如果config禁用了充能赛特斯石英矿石的生成，那么NEI不会再显示"可以在世界中找到充能赛特斯石英"相关的信息。（即：GTNH中，NEI不会再显示"可以在世界中找到充能赛特斯石英"）（by miozune [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/191)）
+* 撤回了之前对于压印器配方的更改（将其移动到整合包设置文件中），修复了在GTNH之外压印器配方丢失的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/192)）
+* P2P通道-ME接口现在支持使用ME接口终端放置样板。（by greesyB [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/193)）
+* 修复了在合成模拟界面取消涉及到奥术合成终端的合成会导致游戏崩溃的bug。（by greesyB [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/194)）
+* 开启“启用替换”选项时，可以请求合成配方所需物品的同矿辞物品。[^2]（by eigenraven [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/195)）
+* 进一步完善格式化数字文本。（by Connor-Colenso [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/197)）
 
-[^2]: 目前只有物品版本的P2P通道-ME接口，流体版本会在以后更新中加入。
+[^2]: 例如编写样板：4橡木木板+4燧石→1工作台，开启“启用替换”功能，此时ME网络内没有任何种类的木板，但是有白桦木原木，同时也有1白桦木原木→4白桦木木板的合成样板。此时进行合成时，终端便会使用白桦木原木合成白桦木木板，再合成工作台。此前终端只会调取网络内已有的同矿辞物品，不够时不会请求合成。
 
 ### Bartworks
 * 版本号：0.5.86 → 0.5.90
