@@ -6,7 +6,7 @@
 
 ## Mod更新
 
-### AE2FluidCraft-Rework（AE2FC）
+### AE2FluidCraft Rework（AE2FC）
 * 版本号：1.0.22-GTNH → 1.0.32-GTNH
 * 修复了ME增广流体样板终端保存8种物品输出的配方会出现错误的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/25)）
 * 修复了极端情况下流体样板编码可能会导致ArrayIndexOutOfBoundsException的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/26)）
@@ -24,7 +24,7 @@
 
 [^1]: 源自懒人AE2（Lazy AE2）。
 
-### Applied-Energistics-2-Unofficial（AE2）
+### Applied Energistics 2 Unofficial（AE2）
 * 版本号：rv3-beta-111-GTNH → rv3-beta-118-GTNH
 * 改善了禁用频道时ME网络的性能表现。（by xyqyear [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/190)）
 * 如果config禁用了充能赛特斯石英矿石的生成，那么NEI不会再显示"可以在世界中找到充能赛特斯石英"相关的信息。（即：GTNH中，NEI不会再显示"可以在世界中找到充能赛特斯石英"）（by miozune [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/191)）
@@ -67,45 +67,70 @@
 [^4]: 因为UHV+的线缆和线缆二极管配方在GTNewHorizonsCoreMod中定义，在Bartworks中不限制可能会导致配方问题。
 [^5]: 湿度判定会导致盐根产量与种子G值的关系并不是单调递增的，而是在G=11或12时产量取得最大值。
 
+### BetterCrashes
+* 版本号：1.1.6-GTNH → 1.1.7-GTNH
+* 精简了ModIdentifier相关后台日志。（by miozune [相关pr](https://github.com/GTNewHorizons/BetterCrashes/pull/7)）
+
 ### BetterQuesting（更好的任务）
-* 版本号：3.0.367-GTNH → 3.1.0-GTNH
-* StandardExpansion, QuestBook, CB4BQ三个BetterQuesting附属Mod整合到了BetterQuesting中。（by eigenraven [相关pr-1](https://github.com/GTNewHorizons/BetterQuesting/pull/78) [相关pr-2](https://github.com/GTNewHorizons/BetterQuesting/pull/79)）
-* Mod config增加了浏览模式中属性为UNLOCKED的未解锁任务线可见性切换的选项，默认开启。（也就是修复了2.2.0.0任务书浏览模式后续任务栏不可见的问题）（by Glease [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/76)）
-* 移植了部分1.12.2版本BetterQuesting的特性。（by Glease [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/76)）具体为：
-  * 可以通过聊天栏分享任务。
-  * 玩家在使用了编辑模式-任务编辑界面中的“重置任务”按钮后，会被标记为"dirty"。
-  * 任务书章节界面上方的“完成进度”现在会自适应调整字号。
+* 版本号：3.1.0-GTNH → 3.1.4-GTNH
+* 修复了在NEI任务界面中，无法获取任务本地化名称的bug。（by iouter [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/80)）
+* 修复了打开空任务线时游戏偶尔会未响应的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/81)）
+* 修复了任务书设置中主题重复的bug。（by eigenraven [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/82)）
+* 修复了在服务器中可重复任务进度不会重置的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/83)）
 
 ### BloodMagic（血魔法）
-* 版本号：1.3.14 → 1.3.16
-* 修复了matchitem导致的NPE（空指针）错误。（by miozune [相关pr](https://github.com/GTNewHorizons/BloodMagic/pull/33)）
-* 删除了语言文件中的重复key。（by ChromicRedBrick [相关pr](https://github.com/GTNewHorizons/BloodMagic/pull/34)）
+* 版本号：1.3.16 → 1.3.18
+* 修复了当服务器请求仪式推测杖的本地化文本时会导致崩溃的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/BloodMagic/pull/35)）
+* 修正了NEI坠星仪式矿石数量估计的算式错误。（by ChromicRedBrick [相关pr](https://github.com/GTNewHorizons/BloodMagic/pull/36)）
 
-### Botanic-horizons
-* 版本号：1.0.11-GTNH → 1.0.12-GTNH
-* 修复了花药台配方不支持藤蔓的bug。（by combusterf [相关pr](https://github.com/GTNewHorizons/Botanic-horizons/pull/17)）
+### Botania
+* 版本号：1.9.10-GTNH → 1.9.11-GTNH
+* 修复了ManaNetworkHandler的一个内存泄漏问题。（by Glease [相关pr](https://github.com/GTNewHorizons/Botania/pull/18)）
 
-### CookingForBlockheads（懒人厨房）
-* 版本号：1.2.12-GTNH → 1.2.13-GTNH
-* 添加了俄语语言文件。（by ldrinn-Elantey [相关pr](https://github.com/GTNewHorizons/CookingForBlockheads/pull/35)）
+### Crops plus plus
+* 版本号：1.3.6.4 → 1.3.6.8
+* 移除了夜光珊瑚高压釜配方生产阳光化合物中的随机概率，将50%出4个阳光化合物粉改为100%出2个。（by dipo33 [相关pr](https://github.com/GTNewHorizons/Crops-plus-plus/pull/44)）
+* 修复了作物矿辞相关的问题。（by Glease [相关pr](https://github.com/GTNewHorizons/Crops-plus-plus/pull/45)）
+* 加入了魔豆作物。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/Crops-plus-plus/pull/46)）
 
-### Crops-plus-plus
-* 版本号：1.3.6.3 → 1.3.6.4
-* 删除了语言文件中的重复key。（by ChromicRedBrick [相关pr](https://github.com/GTNewHorizons/Crops-plus-plus/pull/43)）
+### DefaultServerList
+* 版本号：1.1.1 → 1.4.0
+* 同步原mod的更新。（by glowredman [相关pr](https://github.com/GTNewHorizons/DefaultServerList/pull/1)）
+* 允许拖拽改变默认服务器列表排序。（by Quarri6343 [相关pr](https://github.com/GTNewHorizons/DefaultServerList/pull/2)）
+* 修复了默认服务器列表不会随配置文件更新的bug。（by wohaopa [相关pr](https://github.com/GTNewHorizons/DefaultServerList/pull/3)）
+* 加入了curseforge和modrinth上本mod项目的相关信息。（因为mod现在发布到了这两个网站上）（by glowredman [相关pr](https://github.com/GTNewHorizons/DefaultServerList/pull/4)）
+* 以临时文件的形式获取Changelog。（by glowredman [相关pr](https://github.com/GTNewHorizons/DefaultServerList/pull/5)）
 
-### EnderCore
-* 版本号：0.2.10 → 0.2.11
-* 加入了getFluidFromItem的NEI支持，也就是说，EIO流体导管设置界面可以拖动NEI中的GT“流体片”配置。（by miozune [相关pr](https://github.com/GTNewHorizons/EnderCore/pull/10)）
+### Electro Magic Tools（电动魔法工具）
+* 版本号：1.2.8.21 → 1.2.8.23
+* 修复了大型源质发电机和奥法研究阐释者控制器方块ID对调的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/Electro-Magic-Tools/pull/49)）
+* 将所有数字格式化。（by Connor-Colenso [相关pr](https://github.com/GTNewHorizons/Electro-Magic-Tools/pull/50)）
 
 ### EnderIO（末影接口）
-* 版本号：2.3.1.46 → 2.3.1.47
-* 修复了使用龙研的权杖破坏EIO导管会导致游戏崩溃的bug。（by eigenraven [相关pr](https://github.com/GTNewHorizons/EnderIO/pull/86)）
+* 版本号：2.3.1.47 → 2.3.1.48
+* 将RandomThings的沃土加入种植站识别的耕地列表中。（by miozune [相关pr](https://github.com/GTNewHorizons/EnderIO/pull/87)）
+
+### Eternal Singularity（永恒奇点）
+* 版本号：1.0.4 → 1.0.5
+* 回退着色器版本，修复了MacOS的兼容性问题。（by LionZXY [相关pr](https://github.com/GTNewHorizons/Eternal-Singularity/pull/2)）
+
+### ExtraCells2
+* 版本号：2.5.24 → 2.5.25
+* 使EC2的网络部件和AE2部件采取一致的渲染方式。（by dipo33 [相关pr](https://github.com/GTNewHorizons/ExtraCells2/pull/71)）
 
 ### ForestryMC（林业）
-* 版本号：4.4.15 → 4.4.16
-* 修复了林业工作台中保存有无效配方时会导致进入存档崩溃的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/ForestryMC/pull/30)）
+* 版本号：4.4.16 → 4.5.6
+* 更改了蜜蜂产出计算公式。现在产出公式为：$$P=\left(1+\frac{t}{6}\right)\cdot\left(\left(x\right)^{\frac{1}{2}}\right)\cdot2\left(1+s\right)+p^{\left(x^{\frac{1}{3}}\right)}-3$$[^6]（by kuba6000 [相关pr](https://github.com/GTNewHorizons/ForestryMC/pull/31)）
+* 巨型红杉树的突变不再需要夜晚和特定生物群系。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/ForestryMC/pull/32)）
+* 将GT中蜜蜂加速效果相关代码移到林业Mod中。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/ForestryMC/pull/34)）
+* 加入了对蜜蜂愉快属性的描述。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/ForestryMC/pull/35)）
+* 修复了潜在的内存泄漏问题。（by Glease [相关pr](https://github.com/GTNewHorizons/ForestryMC/pull/36)）
+* 修复一处拼写错误。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/ForestryMC/pull/38)）
+* 修复了Biomes O'Plenty（超多生物群系）中芜青种子提取出种子油的量为0的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/ForestryMC/pull/39)）
 
-### GT5-Unofficial（格雷科技）
+[^6]: $x$为基础产出概率，$s$为蜜蜂速度，$p$为生产加速，$t$为不同蜂箱的修正系数，$P$为最终产出概率。
+
+### GT5 Unofficial（格雷科技）
 * 版本号：5.09.41.61 → 5.09.41.74
 * 修复了黑青铜搅拌-电解配方未配平的问题。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1422)）
 * 使用三录仪扫描集成矿石处理厂时会显示当前并行数。（by boubou19 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1426)）
