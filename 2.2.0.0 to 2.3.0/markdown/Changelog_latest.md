@@ -130,6 +130,51 @@
 
 [^6]: $x$为基础产出概率，$s$为蜜蜂速度，$p$为生产加速，$t$为不同蜂箱的修正系数，$P$为最终产出概率。
 
+### Galacticraft（星系）
+* 版本号：3.0.45-GTNH → 3.0.47-GTNH
+* 在配置文件中添加"Enable Oxygen Tank Hand fill"（启用手动填装氧气罐）条目，启用后可以直接用GC的罐装液态氧和氧气罐合成得到满的氧气罐。（by Glease [相关pr](https://github.com/GTNewHorizons/Galacticraft/pull/55)）
+* 修复了玩家提前跳下登陆舱会导致无法打开着陆气球的bug。（by glowredman [相关pr](https://github.com/GTNewHorizons/Galacticraft/pull/57)）
+
+### GalaxySpace
+* 版本号：1.1.16p → 1.1.16q
+* **不要问我更新了什么，我不知道**
+
+### GoodGenerator
+* 版本号：0.4.33 → 0.4.48
+* 多方块自动放置功能完善。[^7]（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/83)）
+* 修复了热大力合金锭没有真空冷冻机处理配方的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/90)）
+* 修复了之前更新导致的中子活化器结构检测失败的问题。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/92)）
+* 修复了几个YOT储罐的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/94)）包括：
+  * 修复了YOT储罐不识别UEV+玻璃的问题。修复之后，YOT储罐存储单元的等级和需求的玻璃等级正确地一一对应。
+  * 修复了YOT储罐的延迟问题。
+  * YOT仓现在最大可以访问max long mB的流体。[^8]
+  * YOT仓现在最大可以每t输入/输出max long mB的流体。
+* 加入了硅岩基流体燃料MkIV和MkV的新配方，是原配方的高阶替代，使用更后期的材料为原料，旨在为游戏后期提供更高效率的硅岩燃料生产手段。（by GDCloudstrike [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/91)）
+* 将精密自动组装机tooltip中的"0.03mm"改为"7nm"。（by MadMan310 [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/95)）
+* 修复了GoodGenerator的IC2核反应堆燃料棒正常枯竭后会生成堆叠数为0的枯竭燃料棒的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/98)）
+* 硅岩燃料相关配方调整。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/96)）
+  * 调整了原子分离催化剂的合成配方：9个火石粉改为4个火石粉，暗影金属粉改为龙尘，基岩锭粉改为量子锭粉，移除了阳光化合物粉、铕粉、灵宝锭粉合成的配方，统一产出为63个原子分离催化剂粉。
+  * 调整了合成玉板的合成配方：4个泰伯利亚板改为1个泰伯利亚板。
+  * 调整了硅岩燃料精炼厂相关方块的配方：统一为UHV+等级。
+* 硅岩基流体燃料MkI、MkII和MkIII重做，旨在让这三种燃料成为ZPM~UHV阶段等离子发电的相近水平替代品。（by xSkewer [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/99)）
+  * 硅岩乳液相关配方buff。
+  * 重做后的硅岩基流体燃料-MkI定位为ZPM末期。
+  * 重做后的硅岩基流体燃料-MkII定位为UV中期。
+  * 重做后的硅岩基流体燃料-MkIII定位为UHV中期。
+  * 具体内容请看相关pr。
+* 钍相关配方平衡调整。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/76)）
+  * 枯竭的钍基流体燃料不再产出镥，改为钍-232。
+  * 大型化学反应釜制造钍-232的产线消耗氟量增多。
+  * 钍基流体燃料降价。
+  * 枯竭的浓缩钚燃料棒离心产出由氪改为氩。
+* YOT储罐现在支持流体探测覆盖板。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/101)）
+* YOT储罐加入开关溢出销毁选项。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/100)）
+* YOT储罐不再需要维护仓。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/104)）
+* 配平了氢氧化镓粉与钠粉反应的配方消耗和产出的钠数量。
+
+[^7]: 包括：压缩核聚变反应堆、精密自动组装机、冷却塔、大型源质发电机、大型源质冶炼厂、大型硅岩反应堆、中子活化器、硅岩燃料精炼厂、通用化学能引擎、YOT储罐、极限热交换机。
+[^8]: 例如：ME流体存储总线接YOT仓时，以前最多只能读取int long (2^31) mB的流体，现在可以读到最多max long (2^62) mB。
+
 ### GT5 Unofficial（格雷科技）
 * 版本号：5.09.41.61 → 5.09.41.74
 * 修复了黑青铜搅拌-电解配方未配平的问题。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1422)）
@@ -183,15 +228,6 @@
   * 支持超过MAX电压的超频。
   * Shift+右键切换输入总线独立。
 * 修复了脱水机配方没有编程电路，导致配方冲突的问题。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/393)）
-
-### Galacticraft（星系）
-* 版本号：3.0.44-GTNH → 3.0.45-GTNH
-* yeet RuntimeException（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Galacticraft/pull/54)）
-
-### GoodGenerator
-* 版本号：0.4.31 → 0.4.33
-* 修复了大力合金有两个不同电压的高炉配方的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/88)）
-* 修复了无法扫描YOT流体单元方块T9和T10配方的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/89)）
 
 ### Hodgepodge
 * 版本号：1.7.35 → 1.7.37
