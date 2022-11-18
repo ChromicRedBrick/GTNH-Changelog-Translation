@@ -136,7 +136,7 @@
 * 修复了玩家提前跳下登陆舱会导致无法打开着陆气球的bug。（by glowredman [相关pr](https://github.com/GTNewHorizons/Galacticraft/pull/57)）
 
 ### GalaxySpace
-* 版本号：1.1.16p → 1.1.16q
+* 版本号：1.1.16p-GTNH → 1.1.19-GTNH
 * **不要问我更新了什么，我不知道**
 
 ### GoodGenerator
@@ -176,31 +176,38 @@
 [^8]: 例如：ME流体存储总线接YOT仓时，以前最多只能读取int long (2^31) mB的流体，现在可以读到最多max long (2^62) mB。
 
 ### GT5 Unofficial（格雷科技）
-* 版本号：5.09.41.61 → 5.09.41.74
-* 修复了黑青铜搅拌-电解配方未配平的问题。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1422)）
-* 使用三录仪扫描集成矿石处理厂时会显示当前并行数。（by boubou19 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1426)）
-* 修复了部分mod魔改配方失效的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1423)）
-* 修复了使用三录仪扫描超净间开机时功率显示错误的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1425)）
-* 处理阵列可以处理两种以上流体输入/输出的配方，所有含单元的配方都可以映射为对应的流体。（by BlueWeabo [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1346)）
-* 重构fluid_api，使得GT_Fluid相关接口更流畅。（by leagris [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1407)）
-* 修正了重复的本地化key。（by iouter [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1424)）
-* 新增高级/无线红石覆盖板。（by dipo33 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1401)）
-  * 新增2种高级红石覆盖板。
-    * 高级红石信号发射器支持反相输出；
-    * 高级红石信号接收器支持5种模式：与门、与非门、或门、或非门、模拟信号，前四种模式可以接受同一频道下多个覆盖板发出的红石信号；
-  * 新增3种无线覆盖板：无线维护提示覆盖板、无线流体探测覆盖板、无线物品探测覆盖板。
-* 地下流体生成计算公式修正：修复了设定的最小储量>0时流体实际生成量可能远超设定的最大储量的bug。（by chochem [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1418)）
-* NEI页面拼写错误修复：1 ticks → 1 tick。（by Connor-Colenso [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1430)）
-* GT的GUI/tooltip支持数字格式化，例如1000000会格式化为1,000,000。（by Connor-Colenso [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1431)）
-* 将处理蜂窝配方中需求的邻苯二甲酸与氢氟酸对调，即以前要求氢氟酸处理的现在要求邻苯二甲酸，反之亦然。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1433)）
-* 修复了红石信号、能量、物品不能越过流体过滤器覆盖板传输的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1437)）
-* 修复了Botania梦之木和活木的板材切割机配方缺少电路板导致配方冲突的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1436)）
-* 移植了GT6的万能工具。可以Shift+右键切换小刀、锯、锉、螺丝刀、剪线钳、剪枝器六种模式。（by iouter [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1435)）
-* 加入了茶蜂，生产潘马斯茶叶。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1439)）
-* 限制了处理阵列的最大并行，现在放入UEV+机器，最多只能降低1级电压处理配方，也就是最大并行=256。（by BlueWeabo [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1438)）
-* 现在大型热交换机可以处理太阳能盐，1L热太阳能盐=1000L过热蒸汽，而最大过热蒸汽产量等同于热冷却液。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1444)）
-* 处理阵列新增批处理模式，剪线钳Shift+右键切换。批处理模式可以为配方加上一个由输入原料量决定的并行系数，这个系数最大为128。最终的输入、输出为最大并行\*并行系数，同时配方处理时间也为原时间\*并行系数。批处理模式可以极大降低处理阵列造成的延迟，但不会增加其生产效率。（by S4mpsa [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1446)）
-* nerf铟蜂：禁止通过诱变培育，杂交概率降至1%，初始速度改为“最慢”。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1442)）
+* 版本号：5.09.41.74 → 5.09.41.129
+* 凛冰蜂主产出改为暴雪蜂窝，概率15%，离心产出暴雪棒，特殊产物凛冰蜂窝概率从15%改为20%。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1443)）
+* 破坏超级缸时，只保留流体种类和存量这两个必要信息，不保留超级缸的设置模式。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1448)）
+* 允许使用胶带直接右键维护仓维护机器，不需要打开GUI。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1451)）
+* 泵[^9]现在不会自动收回采矿管道，只有用软锤右键的时候才会收回。电烙铁右键泵可以切换回触底自动收回模式。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1449)）
+* 超级箱/量子箱优化。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1450)）
+  * 支持输入过滤。
+  * WAILA支持显示储存物品相关信息。
+  * 在代码中统一了超级箱和量子箱。
+* 将新的蜜蜂产出公式[^10]应用于工业蜂箱。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1447)）
+* 将工业蜂箱的升级从Gendustry（基因工业）移动到GT中。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1447)）
+* 将UIV~MAX的机器部件加入到机器配方生成列表中。（by S4mpsa [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1452)）
+* 添加了将Gendustry的升级框架转换为GT版本的配方。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1453)）
+* 撤回对白千层树的更改[^11]，并且在Mod依赖中移除了Harvestcraft（潘马斯）。（by Alastors [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1459)）
+* 修复了CoverDataSetter相关的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1458)）
+* 大型热交换机加入热量计数器，当蒸馏水不足时，需要过100秒才会达到最大热量而爆炸。此计数器只与爆炸有关。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1455)）
+* 加入了配置蜜蜂效果能否加速的接口。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1460)）
+* 修正了重复的本地化key。（by iouter [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1457)）
+* 修复了GT蜂窝无法本地化的问题。（by iouter [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1454)）
+* 将配置蜜蜂效果能否加速的接口移动至Forestry。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1462)）
+* 修复了超级缸开启溢出销毁模式时，WAILA显示储量错误的bug。（by Matriac [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1463)）
+* 修复了超级缸开启溢出销毁模式时，流体探测覆盖板红石行为错误的bug。（by Matriac [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1464)）
+* 处理阵列现在支持处理最高long max的功率。（by BlueWeabo [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1465)）
+* 修复了GT工具对其他模组支持使用了错误的Mod ID的问题，也即修复了GT工具无法正确代替其他Mod对应工具使用的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1466)）
+* 将蜂窝矿辞从整合包设置文件移动到GT代码中。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1468)）
+* 修复了NEI中蒸汽机器配方总蒸汽使用量计算错误的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1467)）
+* 修正了工业高炉结构的tooltip。现在的表述为：液体形式的流体输出仓位于底层机械方块，气体形式的流体输出仓位于顶层机械方块。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1469)）
+* 
+
+[^9]: 指GT单方块机器“泵”，不是电动泵覆盖板。
+[^10]: 见ForestryMC（林业）更新部分。
+[^11]: 对白千层树的更改见[这条pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/917) 。
 
 ### GTNHLib
 * 版本号：0.0.5 → 0.0.6
