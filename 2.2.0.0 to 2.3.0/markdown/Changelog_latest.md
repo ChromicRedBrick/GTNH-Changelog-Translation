@@ -11,7 +11,7 @@
 * 修复了ME增广流体样板终端保存8种物品输出的配方会出现错误的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/25)）
 * 修复了极端情况下流体样板编码可能会导致ArrayIndexOutOfBoundsException的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/26)）
 * 为流体存储元件加入了显示过滤流体种类的tooltip。（by dipo33 [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/27)）
-* 新增（AE2FC版）ME流体终端。支持显示每种最高long max量的流体。（by asdflj [相关pr1](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/28) [相关pr2](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/29) [相关pr3](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/30)）
+* 新增（AE2FC版）ME流体终端。支持显示每种最高long max量的流体。（by asdflj & GlodBlock [相关pr1](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/28) [相关pr2](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/29) [相关pr3](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/30)）
 * 阻挡模式支持流体p2p。（by guineawheek [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/31)）
 * 修复了一个导致二合一接口无限输出流体的bug。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/32)）
 * 在流体样板终端界面Shift+左键物品栏中的样板，现在会自动将其放到样板输出格，而不是放入ME网络库存内。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/33)）
