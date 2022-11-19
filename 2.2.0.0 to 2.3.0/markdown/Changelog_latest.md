@@ -238,7 +238,7 @@
 * 移除了对IC2燃油罐的兼容。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1506)）
 * 基于新的蜜蜂产出公式[^10]，调整了部分蜂窝的产出概率。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1508)）
 * 修复了蕴魔蜂突变需求，与对应的要素匹配。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1508)）
-* 修复了`depleteInput`只读取多重输入仓第一格内容的bug，从而可以在例如大型内燃引擎上使用1个四重输入仓处理所有需要的流体。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1509)）
+* 修复了`depleteInput`只读取多重输入仓第一格内容的bug，从而可以在例如大型内燃引擎上使用一个四重输入仓处理所有需要的流体。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1509)）
 * 加入了EV和IV单方块燃气涡轮，燃料效率分别为60%和50%。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1511)）
 * 修正了木炭气蒸馏配方的一氧化碳输出量，由2340mB改为240mB。（by OneEyeMaker [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1512)）
 * 修复了在加入EV和IV燃气涡轮后，继续使用旧的配置文件，会导致游戏崩溃的bug。（by Quarri6343 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1516)）
@@ -253,32 +253,32 @@
 [^12]: 见GoodGenerator更新部分。
 [^13]: 见GTplusplus（GT++）更新部分。
 
+### GTNEIOrePlugin
+* 版本号：1.0.17 → 1.0.18
+* 更新了由[Jimbno](https://github.com/Jimbno)提供的新材质。（by miozune [相关pr](https://github.com/GTNewHorizons/GTNEIOrePlugin/pull/23)）
+
+### GTNH Lanthanides（镧系）
+* 版本号：0.9.18 → 0.9.20
+* 加入了一系列流体的本地化key。（by ArtherCasan [相关pr](https://github.com/GTNewHorizons/GTNH-Lanthanides/pull/39)）
+* 修正了配方中的单元数量平衡。（by miozune [相关pr](https://github.com/GTNewHorizons/GTNH-Lanthanides/pull/40)）
+
 ### GTNHLib
-* 版本号：0.0.5 → 0.0.6
-* 使用事件提供的文字渲染分辨率。（by Alexdoru [相关pr](https://github.com/GTNewHorizons/GTNHLib/pull/10)）
+* 版本号：0.0.6 → 0.0.7
+* 添加了服务端请求客户端在快捷栏上显示信息的API。（by miozune [相关pr](https://github.com/GTNewHorizons/GTNHLib/pull/11)）
+
+### GTNHMixins
+* 版本号：2.0.2（新Mod）
 
 ### GTplusplus（GT++）
-* 版本号：1.7.110 → 1.7.118-pre
-* 修复了工业搅拌机使用存储输入总线（ME）导致的物品复制bug。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/380)）
-* 修复了工业搅拌机输入总线独立失效的bug。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/379)）
-* 合金冶炼炉部分配方更改。（by boubou19 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/382)）
-  * 制作熔融铊的配方输出从3/4锭（108mB）改为2锭（288mB）。
-  * 将熔融铊配方原料中洗净的铁矿石改为洗净的锌矿石。
-  * 将熔融博特姆合金配方的处理时间从480s改为120s。
-* 修正了重复的本地化key。（by iouter [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/381)）
-* 更新了texture_api。（by leagris [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/386)）
-* 删除了语言文件中的重复key。（by ChromicRedBrick [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/387)）
-* 修复了最大堆叠小于64的物品在作物管理器中可以超限堆叠的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/391)）
-* 修复了硫化铜\(II\)和氰化钠没有大化反合成配方的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/392)）
-* 更新俄语语言文件。（by Eldrinn-Elantey [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/390)）
-* 新加入巨型合金冶炼炉，是合金冶炼炉的升级版。（by MadMan310 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/394) [discord特性前瞻](https://discord.com/channels/181078474394566657/295669878222880769/1028718667275440249)）
-  * UV阶段可以制造。
-  * 最大256并行。
-  * 有基于线圈等级的速度加成，为线圈等级/130，计算结果按千分位四舍五入，使用时永恒线圈达到10%的最大加成。结构中也可以使用冶炼炉线圈方块，此时没有速度加成。
-  * UV+玻璃解锁激光仓，UEV+玻璃解锁所有等级能源仓。
-  * 支持超过MAX电压的超频。
-  * Shift+右键切换输入总线独立。
-* 修复了脱水机配方没有编程电路，导致配方冲突的问题。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/393)）
+* 版本号：1.7.118-pre → 1.7.142-pre
+* 将化工厂定位为MV可制作，并且统一制作材料为MV级别。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/396)）
+* 回退了对无菌农场机械方块造价的nerf，并且调整藻类农场控制器方块的造价为MV级别。（by Steelux8 [相关pr1](https://github.com/GTNewHorizons/GTplusplus/pull/397) [相关pr2](https://github.com/GTNewHorizons/GTplusplus/pull/402)）
+* 将无尽突变催化剂配方的输出从1调整为5，以匹配输入消耗的5个催化剂外壳。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/398)）
+* 修复了GT++材料不显示本地化的bug。（by iouter [相关pr1](https://github.com/GTNewHorizons/GTplusplus/pull/395) [相关pr2](https://github.com/GTNewHorizons/GTplusplus/pull/404) [相关pr3](https://github.com/GTNewHorizons/GTplusplus/pull/405)）
+* 由于TPV线圈的加入[^13]，修改了化工厂手册的描述。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/409)）
+* 
+
+[^13]: 见GT5 Unofficial（格雷科技）更新部分。
 
 ### Hodgepodge
 * 版本号：1.7.35 → 1.7.37
