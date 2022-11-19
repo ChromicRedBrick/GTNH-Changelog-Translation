@@ -176,7 +176,7 @@
 [^8]: 例如：ME流体存储总线接YOT仓时，以前最多只能读取int long (2^31) mB的流体，现在可以读到最多max long (2^62) mB。
 
 ### GT5 Unofficial（格雷科技）
-* 版本号：5.09.41.74 → 5.09.41.129
+* 版本号：5.09.41.74 → 5.09.41.132
 * 凛冰蜂主产出改为暴雪蜂窝，概率15%，离心产出暴雪棒，特殊产物凛冰蜂窝概率从15%改为20%。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1443)）
 * 破坏超级缸时，只保留流体种类和存量这两个必要信息，不保留超级缸的设置模式。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1448)）
 * 允许使用胶带直接右键维护仓维护机器，不需要打开GUI。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1451)）
@@ -188,9 +188,9 @@
 * 将新的蜜蜂产出公式[^10]应用于工业蜂箱。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1447)）
 * 将工业蜂箱的升级从Gendustry（基因工业）移动到GT中。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1447)）
 * 将UIV~MAX的机器部件加入到机器配方生成列表中。（by S4mpsa [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1452)）
-* 添加了将Gendustry的升级框架转换为GT版本的配方。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1453)）
+* 添加了将Gendustry（基因工业）的升级框架转换为GT版本的配方。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1453)）
 * 撤回对白千层树的更改[^11]，并且在Mod依赖中移除了Harvestcraft（潘马斯）。（by Alastors [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1459)）
-* 修复了CoverDataSetter相关的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1458)）
+* 修复了`CoverDataSetter`相关的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1458)）
 * 大型热交换机加入热量计数器，当蒸馏水不足时，需要过100秒才会达到最大热量而爆炸。此计数器只与爆炸有关。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1455)）
 * 加入了配置蜜蜂效果能否加速的接口。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1460)）
 * 修正了重复的本地化key。（by iouter [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1457)）
@@ -203,11 +203,55 @@
 * 将蜂窝矿辞从整合包设置文件移动到GT代码中。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1468)）
 * 修复了NEI中蒸汽机器配方总蒸汽使用量计算错误的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1467)）
 * 修正了工业高炉结构的tooltip。现在的表述为：液体形式的流体输出仓位于底层机械方块，气体形式的流体输出仓位于顶层机械方块。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1469)）
-* 
+* 限定无尽、宇宙中子素、无尽催化剂、镅、氪蜂窝只能在巨型蜂箱（Mega Apiary）中产出。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1470)）
+* 修复了之前更新导致意外的蜜蜂产出提升的问题。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1472)）
+* 修复了之前更新未考虑蜂箱升级数量效果叠加的问题。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1474)）
+* 为GT扳手加入了对ProjectRed（红石计划）扳手的支持。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1475)）
+* 加入了ME输出仓，可以直接将流体输出到ME网络中。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1473)）
+* 修复了重载材质会导致GT流体材质丢失的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1477)）
+* 取代了代码中一处`gridproxy`，修复了一项空指针异常。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1478)）
+* 修复了客户端没有正确读取机器流体槽位，使得填充流体槽时会先消耗错误数量的流体再与服务端同步修正的问题。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1480)）
+* 移除了将Gendustry（基因工业）的蜜蜂转换为GT蜜蜂的代码。（by DianeXD [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1187)）
+* 将方块被破坏时是否应该掉落其内容物的检测加入到API中。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1479)）
+* 加入了铝土、钛铁、蓝宝石、石榴石等一系列用途较少矿石的新处理线，可以从中获取一些有用的产物。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1210)）
+* 将多重锭/板、齿轮、转子等一系列部件的最大堆叠数改为64。（by Phineasor [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1484)）
+* 用钛-铂-钒（TPV）线圈代替了钨钢线圈。TPV的成分为3:3:1的钛、铂、钒。意在减少EV阶段对钨钢的需求，以及鼓励在EV制作自动化的铂产线。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1211)）
+* 修复了一系列的配方bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1489)）
+  * 修复了Botania（植物魔法）中玄武岩台阶和玄武岩板的配方冲突。
+  * 修复了部分配方中单元数量不守恒的问题。
+  * 修复了板材切割机存在空输出配方的问题。
+  * 修复了GT玄武岩切割配方重复的问题。
+  * 修复了GT玄武岩相关配方不平衡的问题。
+* 修复了四重输入仓在特殊情况下会吞流体的bug。（by guineawheak [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1487)）
+* 加入了含内部存储的能源仓的构造器，意在修复GT++的相关bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1488)）
+* 强制工业蜂箱最多请求4A电流，修复了工业蜂箱无法获取足够功率的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1492)）
+* 修复了某些情况下机器控制覆盖板会在聊天栏中刷屏的bug。（by johnch18 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1490)）
+* 允许超净间结构中放置最多2个门，意在使Alastors能够心满意足，安心睡觉。（by POPlol333 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1493)）
+* 加入了从Forge流体中创建GT材料的方法。（by Elisis & Glease [相关pr1](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1497) [相关pr2](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1502)）
+* 加入了集成矿石处理厂相关成就的本地化key。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1499)）
+* 加入了新回旋加速器多方块结构所需的线圈方块。[^12]（by Conner-Colenso [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1494)）
+* 更改了引擎进气机械方块的材质。（by leagris [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1500)）
+* 修复了物品tooltip中的原始类型（raw type）警告。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1501)）
+* 修正了集成矿石处理厂的消声仓和输入仓使用的索引。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1503)）
+* 覆写了存储输入总线（ME）代码中的`setStackToZeroInsteadOfNull`，修复了相关bug。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1504)）
+* 修复了拆解机无法正确处理含有容器的配方的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1505)）
+* 移除了对IC2燃油罐的兼容。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1506)）
+* 基于新的蜜蜂产出公式[^10]，调整了部分蜂窝的产出概率。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1508)）
+* 修复了蕴魔蜂突变需求，与对应的要素匹配。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1508)）
+* 修复了`depleteInput`只读取多重输入仓第一格内容的bug，从而可以在例如大型内燃引擎上使用1个四重输入仓处理所有需要的流体。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1509)）
+* 加入了EV和IV单方块燃气涡轮，燃料效率分别为60%和50%。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1511)）
+* 修正了木炭气蒸馏配方的一氧化碳输出量，由2340mB改为240mB。（by OneEyeMaker [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1512)）
+* 修复了在加入EV和IV燃气涡轮后，继续使用旧的配置文件，会导致游戏崩溃的bug。（by Quarri6343 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1516)）
+* 修复了在[上一项更新](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1516)后，大型燃气涡轮不消耗燃料的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1517)）
+* 加入了量子力转换机（Quantum Force Transformer）多方块结构[^13]相关的机械方块。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1514)）
+* 加入了由[Jimbno](https://github.com/Jimbno)设计的几种新披风。（by boubou19 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1519)）
+* 修复了当包含空堆叠的物品组由`getNonUnidiedStack`处理时，游戏崩溃的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1520)）
 
 [^9]: 指GT单方块机器“泵”，不是电动泵覆盖板。
 [^10]: 见ForestryMC（林业）更新部分。
 [^11]: 对白千层树的更改见[这条pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/917) 。
+[^12]: 见GoodGenerator更新部分。
+[^13]: 见GTplusplus（GT++）更新部分。
 
 ### GTNHLib
 * 版本号：0.0.5 → 0.0.6
