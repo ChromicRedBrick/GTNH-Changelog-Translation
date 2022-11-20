@@ -223,7 +223,7 @@
   * 修复了GT玄武岩切割配方重复的问题。
   * 修复了GT玄武岩相关配方不平衡的问题。
 * 修复了四重输入仓在特殊情况下会吞流体的bug。（by guineawheak [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1487)）
-* 加入了含内部存储的能源仓的构造器，意在修复GT++的相关bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1488)）
+* 加入了含内部存储的能源仓的构造器，意在修复GT++ RTG动力单元相关的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1488)）
 * 强制工业蜂箱最多请求4A电流，修复了工业蜂箱无法获取足够功率的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1492)）
 * 修复了某些情况下机器控制覆盖板会在聊天栏中刷屏的bug。（by johnch18 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1490)）
 * 允许超净间结构中放置最多2个门，意在使Alastors能够心满意足，安心睡觉。（by POPlol333 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1493)）
@@ -244,7 +244,7 @@
 * 修复了在加入EV和IV燃气涡轮后，继续使用旧的配置文件，会导致游戏崩溃的bug。（by Quarri6343 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1516)）
 * 修复了在[上一项更新](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1516)后，大型燃气涡轮不消耗燃料的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1517)）
 * 加入了量子力转换机（Quantum Force Transformer）多方块结构[^13]相关的机械方块。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1514)）
-* 加入了由[Jimbno](https://github.com/Jimbno)设计的几种新披风。（by boubou19 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1519)）
+* 加入了由[@Jimbno](https://github.com/Jimbno)设计的几种新披风。（by boubou19 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1519)）
 * 修复了当包含空堆叠的物品组由`getNonUnidiedStack`处理时，游戏崩溃的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1520)）
 
 [^9]: 指GT单方块机器“泵”，不是电动泵覆盖板。
@@ -255,7 +255,7 @@
 
 ### GTNEIOrePlugin
 * 版本号：1.0.17 → 1.0.18
-* 更新了由[Jimbno](https://github.com/Jimbno)提供的新材质。（by miozune [相关pr](https://github.com/GTNewHorizons/GTNEIOrePlugin/pull/23)）
+* 更新了由@Jimbno提供的新材质。（by miozune [相关pr](https://github.com/GTNewHorizons/GTNEIOrePlugin/pull/23)）
 
 ### GTNH Lanthanides（镧系）
 * 版本号：0.9.18 → 0.9.20
@@ -276,15 +276,41 @@
 * 将无尽突变催化剂配方的输出从1调整为5，以匹配输入消耗的5个催化剂外壳。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/398)）
 * 修复了GT++材料不显示本地化的bug。（by iouter [相关pr1](https://github.com/GTNewHorizons/GTplusplus/pull/395) [相关pr2](https://github.com/GTNewHorizons/GTplusplus/pull/404) [相关pr3](https://github.com/GTNewHorizons/GTplusplus/pull/405)）
 * 由于TPV线圈的加入[^13]，修改了化工厂手册的描述。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/409)）
-* 
+* 修复了作物管理器在log中`NoSuchElementException`刷屏的bug。（by guineawheek [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/408)）
+* 修复了硫镉矿石电解配方产出过多的问题。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/410)）
+* 修复了氯乙酸混合物制作配方不返还空单元的问题。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/410)）
+* 移除了RTG动力单元的反射。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/411)）
+* 修改了一些GT++材料的等级顺序。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/403)）
+* 略微降低了半流质的造价，并且使LV半流质发电机在LV阶段即可制作。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/403)）
+* 加入了XL超临界蒸汽涡轮。与其他XL涡轮基本属性一致。（by GlodBlock [相关pr1](https://github.com/GTNewHorizons/GTplusplus/pull/413) [相关pr2](https://github.com/GTNewHorizons/GTplusplus/pull/414)）
+* 修复了因代码问题导致能源站实际损耗为10%的bug，修正到5%。（by chochem [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/417)）
+* 更改了量子反常的材质，新材质由@Jimbno制作。（by Connor-Colenso [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/415)）
+* 允许原木拟生场种植腐化树苗。（by guineawheek [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/418)）
+* GT++多方块机器控制器和结构方块配方使用材料等级统一，并且加入组装机配方便于自动化。（all by Dream-Master）
+  * EV：工业焦炉（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/433)）
+  * IV：工业线缆机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/434)）、工业搅拌机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/430)）、炽焱高炉（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/435)）、工业电解机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/429)）、工业热力精炼厂（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/426)）、工业筛选机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/428)、工业洗矿厂（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/421)）、工业粉碎机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/427)）、珠海渔场（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/421)）、工业压模机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/424)）、合金冶炼炉（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/419)）、工业离心机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/437)）、工业辊压机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/437)）、工业切割机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/437)）
+  * LuV：亚马逊仓库（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/436)）
+  * UV：质量发生器（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/437)）
+* 修复了部分有序合成配方失效的问题。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/438)）
+* 修复了部分GT++材料在锻造锤配方中不是3锭→2板的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/438)）
+* 移除了涡轮材质的反射。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/439)）
+* 用`static`修饰所有结构定义field。（by Glease [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/443)）
 
 [^13]: 见GT5 Unofficial（格雷科技）更新部分。
 
+### HarvestCraft（潘马斯）
+* **未知更新**
+
 ### Hodgepodge
-* 版本号：1.7.35 → 1.7.37
-* 修复了`speedupBOPFogHandling`不兼容的bug。（by makamys [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/129)）
-* 修复了使用分割徽章去除附魔会导致复制物品的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/131)）
-* 加入了有关dimension provider导致的游戏崩溃的debug log。（by miozune [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/132)）
+* 版本号：1.7.37 → 2.0.7-pre
+* 将ModMixins重新并入Hodgepodge。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/134)）
+* 加快了`World.updateEntites`移除方块实体的速度，修复了某些情况下区块重载会导致方块实体停止工作的bug。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/133)）
+* 修复了未启用fastcraft时，Opis在服务器中默认启用，产生延迟的问题。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/133)）
+* 
+
+### HoloInventory
+* 版本号：2.1.17-GTNH → 2.1.18-GTNH
+* 修复了安装了OptiFine时，全息眼镜在特定角度下不会显示抽屉内容物的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/HoloInventory/pull/29)）
 
 ### HydroEnergy
 * 版本号：1.0.12 → 1.0.13
