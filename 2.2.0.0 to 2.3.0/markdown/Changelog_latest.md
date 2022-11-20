@@ -78,6 +78,9 @@
 * 修复了任务书设置中主题重复的bug。（by eigenraven [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/82)）
 * 修复了在服务器中可重复任务进度不会重置的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/83)）
 
+### BloodArsenal
+* 待填
+
 ### BloodMagic（血魔法）
 * 版本号：1.3.16 → 1.3.18
 * 修复了当服务器请求仪式推测杖的本地化文本时会导致崩溃的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/BloodMagic/pull/35)）
