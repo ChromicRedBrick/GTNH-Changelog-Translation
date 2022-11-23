@@ -206,7 +206,7 @@
 * 将蜂窝矿辞从整合包设置文件移动到GT代码中。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1468)）
 * 修复了NEI中蒸汽机器配方总蒸汽使用量计算错误的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1467)）
 * 修正了工业高炉结构的tooltip。现在的表述为：液体形式的流体输出仓位于底层机械方块，气体形式的流体输出仓位于顶层机械方块。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1469)）
-* 限定无尽、宇宙中子素、无尽催化剂、镅、氪蜂窝只能在巨型蜂箱（Mega Apiary）中产出。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1470)）
+* 限定无尽、宇宙中子态素、无尽催化剂、镅、氪蜂窝只能在巨型蜂箱（Mega Apiary）中产出。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1470)）
 * 修复了之前更新导致意外的蜜蜂产出提升的问题。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1472)）
 * 修复了之前更新未考虑蜂箱升级数量效果叠加的问题。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1474)）
 * 为GT扳手加入了对ProjectRed（红石计划）扳手的支持。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1475)）
@@ -309,41 +309,100 @@
 * 将ModMixins重新并入Hodgepodge。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/134)）
 * 加快了`World.updateEntites`移除方块实体的速度，修复了某些情况下区块重载会导致方块实体停止工作的bug。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/133)）
 * 修复了未启用fastcraft时，Opis在服务器中默认启用，产生延迟的问题。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/133)）
-* 
+* 更新到Hodgepodge 2.0。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/116)）
+  * 使用GTNHMixins 2.0。
+  * 使用`IEarlyMixin`和`ILateMixin`，将mixins重新分为`early/`和`late/`。
+  * 不再以JAR文件名称匹配Mod，而是使用已加载核心Mod类的列表，以及Mod id。
+  * 重新组织Mod项目的结构，使之更直观，并且极大减少了意外的早期类加载。
+  * 移除了多余的`getBlock()`修复内容。
+  * 移除了GT5u锯子采集冰块相关的修复，该修复已移动到GT5u的代码中。
+  * 应用Hodgepodge 2.0更新，需要移除SpongeMixins、ModMixins，并添加GTNHMixins 2.0.0以上版本。
+* 修复了`Tunnel Bore mixin`。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/135)）
+* 修复了一处拼写错误。（by Alexdoru [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/137)）
+* 加入了在CurseForge上使用的相关Mod依赖列表。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/138)）
+* 修复了食用堆叠的蘑菇煲会全部消耗，只返还1个碗的bug。（by wlhlm [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/141)）
+* 加入了在CurseForge上使用的可选Mod依赖列表。（by glowredman [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/139)）
+* 修复了未安装NEI时，`fixPotionEffectRender`会导致游戏崩溃的bug。并且正确地将该修复应用于原版NEI和GTNH版NEI。（by makamys [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/142)）
+* 修复了兼容类会导致服务端崩溃的bug。（by makamys [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/144)）
 
 ### HoloInventory
 * 版本号：2.1.17-GTNH → 2.1.18-GTNH
 * 修复了安装了OptiFine时，全息眼镜在特定角度下不会显示抽屉内容物的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/HoloInventory/pull/29)）
 
 ### HydroEnergy
-* 版本号：1.0.12 → 1.0.13
-* 修复了mixin本地变量的注入。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/HydroEnergy/pull/17)）
+* 版本号：1.0.13 → 1.0.14
+* 修复了在Apple Silicon处理器（如M1系列/M2）上启动会直接崩溃的bug。（by LionZXY [相关pr](https://github.com/GTNewHorizons/HydroEnergy/pull/18)）
+
+### IFU (I will find you!)（寻矿魔杖）
+* 版本号：1.9.4 → 1.9.5
+* 使用Mod本地而非基于Mixin的Visual Prospecting集成。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/IFU/pull/12)）
 
 ### Infernal-Mobs
-* 版本号：1.7.5-GTNH → 1.7.6-GTNH
-* 限制了可以将玩家拉向自己的精英怪的最大作用距离。（by Glease [相关pr](https://github.com/GTNewHorizons/Infernal-Mobs/pull/11)）
+* 版本号：1.7.6-GTNH → 1.7.7-GTNH
+* 防止`onAttack`在反射伤害中触发，以避免攻击怪物会导致玩家被反射造成凋零和反胃状态。（by Glease [相关pr](https://github.com/GTNewHorizons/Infernal-Mobs/pull/12)）
 
 ### KekzTech
 * 版本号：0.6.15 → 0.6.16
-* 修改了兰波顿超级电容库计算平均输入输出的方式。[^3]（by TrainerSnow [相关pr](https://github.com/GTNewHorizons/KekzTech/pull/43)）
-
-[^3]: 会导致进入存档崩溃，解决方法为手动更新TecTech。
+* 修复了[最近的更改](https://github.com/GTNewHorizons/KekzTech/pull/43)导致进入存档崩溃的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/KekzTech/pull/44)）
+* 完全重做TFFT。（by DianeXD [相关pr1](https://github.com/GTNewHorizons/KekzTech/pull/45) [相关pr2](https://github.com/GTNewHorizons/KekzTech/pull/47)）详细内容如下：
+  * 完善了多方块结构全息投影仪以及自动放置支持。
+  * 修复了偶然出现的吞流体bug。
+  * 修复了锁定输出仓流体不起作用的bug。
+  * 修复了TFFT输入/输出仓不支持末影流体导管的bug。
+  * 为TFFT加入了全种类玻璃支持。
+  * 修改了相关主方块、TFFT机械方块、TFFT存储库方块的材质。
+  * 加入了T6-T10的TFFT存储库方块。T1-T10 TFFT存储库方块的数据如下：
+    * T1单方块储量1,000,000L，耗电1 EU/t，LV等级。
+    * T2单方块储量4,000,000L，耗电2 EU/t，MV等级。
+    * T3单方块储量16,000,000L，耗电5 EU/t，HV等级。
+    * T4单方块储量64,000,000L，耗电14 EU/t，EV等级。
+    * T5单方块储量256,000,000L，耗电42 EU/t，IV等级。
+    * T6单方块储量2,048,000,000L，耗电132 EU/t，LuV等级。
+    * T7单方块储量131,072,000,000L，耗电429 EU/t，UV等级。
+    * T8单方块储量8,388,608,000,000L，耗电1430 EU/t，UEV等级。
+    * T9单方块储量536,870,912,000,000L，耗电4862 EU/t，UMV等级。
+    * T10单方块储量1,099,511,627,776,000,000L，耗电为0，UXV等级。
+    * TFFT单种流体的储量仍然为存储库方块总储量的1/25。
+  * TFFT总耗电为0的时候，可以不安装能源仓。
+  * 用一种TFFT仓取代了此前的三种TFFT输入/输出仓。TFFT仓可使用末影流体导管直接输入/输出特定流体，也可以连上AE的ME流体存储总线，直接与ME网络交互。ME网络可以经由此读取每种最大long max量的流体，交互速率无限制。
+  * 加入了TFFT相关新方块的配方，并且修改了全部原有的配方，价格总体上降低。该多方块结构仍然定位为EV+可以制造。
+* 修复了兰波顿超级电容库相关的一个`NullPointerException`错误。（by spacebuilder2020 [相关pr](https://github.com/GTNewHorizons/KekzTech/pull/46)）
+* 在检测结构前重置结构相关变量，修复了需要重新放置主方块才能更改结构的bug。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/KekzTech/pull/48)）
 
 ### KubaTech
-* 版本号：0.5.10 → 0.5.11
-* 工业屠宰场在超频到1t之后会按4/4的模式继续增加并行。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/25)）
+* 版本号：0.5.11 → 0.6.4
+* 禁止工业屠宰场主方块任意旋转（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/27)）
+* 加入了巨型工业蜂箱/繁殖站（Industrial Apicultural Acclimatiser and Drone Domestication Station，简称Mega Apiary）[^14]。旨在为后期提供更高效率的蜜蜂生产方案。（by kuba6000 [相关pr1](https://github.com/GTNewHorizons/KubaTech/pull/26) [相关pr2](https://github.com/GTNewHorizons/KubaTech/pull/28) [相关pr3](https://github.com/GTNewHorizons/KubaTech/pull/29) [相关pr4](https://github.com/GTNewHorizons/KubaTech/pull/31)）
+  * 定位为UV+机器。
+  * 该机器有三种运行模式：输入模式、输出模式、工作模式。这三种模式的切换和用途与极限工业温室类似。
+  * 工作模式分为两种子模式：普通(Normal)模式和蜂群(Swarmer)模式。
+    * 普通模式下：是工业蜂箱的多方块升级版。每只蜂后消耗1A LuV。单次运行时间5秒。自带64倍加速、8倍产出升级、基因稳定升级，并且会模拟蜜蜂生长的最佳环境。可以提供蜂王浆提高产出，每个蜂王浆增加每次运行每只蜜蜂5%产出，最大加成200%。
+    * 蜂群模式下：只能放入1只蜂后。会缓慢产出卑劣公主蜂。每次运行消耗100个蜂王浆。基础运行时间为1分钟，基础功率为1A IV，可以超频。
+    * 部分蜜蜂只能使用巨型工业蜂箱产出蜂窝。详见GT5u更新部分。
+* 将工业屠宰场对武器损耗的判定改为`hitEntity`，从而修复了部分实际使用时不会消耗耐久的武器在工业屠宰场中会消耗耐久的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/32)）
+* 将Mod中Mixin的部分改为调用GTNH Mixins。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/33)）
 
-### LogisticsPipes（逻辑管道）
-* 版本号：0.9.4.5.7-GTNH → 0.9.4.5.8-GTNH
-* 修复了NEI幽灵物品拖放功能在逻辑管道中失效的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/LogisticsPipes/pull/12)）
+[^14]: 这是一台机器的名字。
 
-### MX-Random
-* 版本号：0.1.4 → 0.1.5
-* 修复了从大型分子装配室中取走数据球导致的游戏崩溃问题。（by eigenraven [相关pr](https://github.com/GTNewHorizons/MX-Random/pull/5)）
+### LogisticsPipes（物流管道）
+* 版本号：0.9.4.5.8-GTNH → 0.9.4.5.9-GTNH
+* 修复了发送无效容器中的物品时，会导致`NullPointerException`崩溃的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/LogisticsPipes/pull/13)）
 
 ### MagicBees（魔法蜜蜂）
-* 版本号：2.5.12-GTNH → 2.5.13-GTNH
-* 修复了语言文件中错误的本地化key。（by ChromicRedBrick [相关pr](https://github.com/GTNewHorizons/MagicBees/pull/13)）
+* 版本号：2.5.13-GTNH → 2.5.15-GTNH
+* 加入蜜蜂效果能否加速的接口，但在之后的pr中又将其移至Forestry（林业）。相当于未更新实际功能。（by kuba6000 [相关pr1](https://github.com/GTNewHorizons/MagicBees/pull/14) [相关pr2](https://github.com/GTNewHorizons/MagicBees/pull/15)）
+
+### MalisisDoors（更多门）
+* 版本号：1.13.5-GTNH → 1.13.6-GTNH
+* 加快了力场控制器的冷却速度。（by MadMan310 [相关pr1](https://github.com/GTNewHorizons/MalisisDoors/pull/4)）
+
+### ModularUI
+* 版本号：1.0.16（新Mod）
+* 
+
+### MouseTweaks（鼠标手势）
+* 版本号：2.4.5-GTNH → 2.4.6-GTNH
+* 取消了开发环境以外的debug log。（by miozune [相关pr](https://github.com/GTNewHorizons/MouseTweaks/pull/2)）
 
 ### NewHorizonsCoreMod
 * 版本号：1.9.80 → 1.9.83

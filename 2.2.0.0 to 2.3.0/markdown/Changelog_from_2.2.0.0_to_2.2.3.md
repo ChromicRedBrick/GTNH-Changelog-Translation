@@ -167,9 +167,9 @@
 * 版本号：0.5.10 → 0.5.11
 * 工业屠宰场在超频到1t之后会按4/4的模式继续增加并行。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/25)）
 
-### LogisticsPipes（逻辑管道）
+### LogisticsPipes（物流管道）
 * 版本号：0.9.4.5.7-GTNH → 0.9.4.5.8-GTNH
-* 修复了NEI幽灵物品拖放功能在逻辑管道中失效的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/LogisticsPipes/pull/12)）
+* 修复了NEI幽灵物品拖放功能在物流管道中失效的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/LogisticsPipes/pull/12)）
 
 ### MX-Random
 * 版本号：0.1.4 → 0.1.5
