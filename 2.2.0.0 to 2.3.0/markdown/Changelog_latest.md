@@ -1,7 +1,5 @@
 # 2.2.3至今更新内容
 
-
-
 ## Mod文件变动
 
 ## Mod更新
@@ -179,7 +177,7 @@
 [^8]: 例如：ME流体存储总线接YOT仓时，以前最多只能读取int long (2^31) mB的流体，现在可以读到最多max long (2^62) mB。
 
 ### GT5 Unofficial（格雷科技）
-* 版本号：5.09.41.74 → 5.09.41.132
+* 版本号：5.09.41.74 → 5.09.41.150-pre
 * 凛冰蜂主产出改为暴雪蜂窝，概率15%，离心产出暴雪棒，特殊产物凛冰蜂窝概率从15%改为20%。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1443)）
 * 破坏超级缸时，只保留流体种类和存量这两个必要信息，不保留超级缸的设置模式。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1448)）
 * 允许使用胶带直接右键维护仓维护机器，不需要打开GUI。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1451)）
@@ -249,6 +247,25 @@
 * 加入了量子力转换机（Quantum Force Transformer）多方块结构[^13]相关的机械方块。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1514)）
 * 加入了由[@Jimbno](https://github.com/Jimbno)设计的几种新披风。（by boubou19 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1519)）
 * 修复了当包含空堆叠的物品组由`getNonUnidiedStack`处理时，游戏崩溃的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1520)）
+* 增加了支持机器功率以long值处理的`MultiBlockBase`文件，并且同时支持普通和TecTech能源仓。（by GlodBlock & BlueWeabo [相关pr1](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1521) [相关pr2](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1523)）
+* 计算超频时，机器的功率现在以long值处理。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1522)）
+* 使用ModularUI重写了GUI。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1381)）比较重要的更改内容如下：
+  * 所有虚拟库存栏位现在都会自动支持NEI幽灵物品拖放。例如存储输入总线（ME）。
+  * NEI配方界面会忽略物品/流体槽位之外的UI部分，由ModularUI提供的“进度条”动画替代。
+  * NEI配方界面中，GT机器配方本身的区域会突出显示。
+  * NEI多方块机器和单方块机器配方显示中输入输出槽位的风格统一。
+  * 部分“进度条”动画是回环式的，例如洗矿厂、搅拌机。
+  * 机器的名称标题会绘制于GUI主窗口上方，并且选项卡的样式是可配置的。不会再出现标题重叠。
+  * 支持虚拟电路板的机器GUI右下角的GregTech图标替换成了更加有辨识度的“电路槽位”样式。
+  * 解决了例如碎石机一类的配方需要编程电路，但是机器没有可用实体槽位的情况下的NEI配方显示问题。
+  * 覆盖板窗口与服务端同步。服务器中其他玩家配置覆盖板的时候，客户端也会同步更改。并且如果在GUI打开的情况下有玩家移除了覆盖板，GUI窗口会立刻关闭。
+  * 点击覆盖板标签栏会打开浮于机器主GUI上方的可拖动配置窗口。可以同时打开多个覆盖板配置窗口。
+  * 数字文本`field`支持使用数学表达式。
+  * 修复了工业蜂箱中“插入已分析蜜蜂以查看详细信息”无法正常工作的bug。
+  * 原有资源包对GUI的更改会失效，需要重做。
+* 加入了聚苯并咪唑管道方块、高级过滤机械方块、核能之星（Nuclear Star），用于部件装配线（Component Assembly Line）的结构方块和处理配方。[^12]（by MadMan310 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1524)）
+* 修复了使用存储输入总线（ME）的机器开启配方锁定会导致原料不消耗的bug。（by repo-alt [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1526)）
+* 允许自定义NEI和基础机器界面中的GregTech图标。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1525)）
 
 [^9]: 指GT单方块机器“泵”，不是电动泵覆盖板。
 [^10]: 见ForestryMC（林业）更新部分。
@@ -380,7 +397,7 @@
     * 蜂群模式下：只能放入1只蜂后。会缓慢产出卑劣公主蜂。每次运行消耗100个蜂王浆。基础运行时间为1分钟，基础功率为1A IV，可以超频。
     * 部分蜜蜂只能使用巨型工业蜂箱产出蜂窝。详见GT5u更新部分。
 * 将工业屠宰场对武器损耗的判定改为`hitEntity`，从而修复了部分实际使用时不会消耗耐久的武器在工业屠宰场中会消耗耐久的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/32)）
-* 将Mod中Mixin的部分改为调用GTNH Mixins。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/33)）
+* 将Mod中mixin的部分改为调用GTNH Mixins。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/33)）
 
 [^14]: 这是一台机器的名字。
 
@@ -397,21 +414,61 @@
 * 加快了力场控制器的冷却速度。（by MadMan310 [相关pr1](https://github.com/GTNewHorizons/MalisisDoors/pull/4)）
 
 ### ModularUI
-* 版本号：1.0.16（新Mod）
-* 
+* 版本号：1.0.20（新Mod）
+* 是1.12.2 ModularUI的向下移植版。ModularUI是一个GUI库，源于GTCE，可以简化创建GUI的过程。需要GTNHMixins做前置。更多详见GT5u等Mod的更新内容。
 
 ### MouseTweaks（鼠标手势）
 * 版本号：2.4.5-GTNH → 2.4.6-GTNH
 * 取消了开发环境以外的debug log。（by miozune [相关pr](https://github.com/GTNewHorizons/MouseTweaks/pull/2)）
 
 ### NewHorizonsCoreMod
-* 版本号：1.9.80 → 1.9.83
-* 删除了语言文件中的重复key。（by ChromicRedBrick [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/421)）
-* 统一了组装机制作Ztones方块配方使用编程电路的格式，即对应序号的方块使用对应编程电路。（by miozune [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/423)）
-* Buff了蒸汽时代的一些配方。（by Connor-Colenso [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/422)）
-  * 研磨燧石：80s → 40s；
-  * 将部分合金炉配方蒸汽需求量减为原来的一半；
-  * 合金炉制作玻璃管：12s → 6s。
+* 版本号：1.9.83 → 1.9.107
+* 在高阶电路配方中使用贴片电感替代小型线圈。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/424)）
+* 加入了贴片电感、进阶贴片电感、光学贴片电感的合成配方。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/425)）
+* 将蜂箱升级的合成配方移动至CoreMod中。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/429)）
+* 加入了UIV和UMV单方块机器的合成配方。UIV的主要合成材料为下界之星线缆和黑钚；UMV的主要合成材料为量子锭线缆和时空。（by S4mpsa [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/430)）
+* 使活化工具台无法获得玩家限定的特殊怪物掉落物。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/432)）
+* 移除了配方中的所有0号电路板。（by miozune [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/431)）
+* 移除了氧化锌的高炉配方，用焙烧锌取代。（by miozune [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/433)）
+* 将蜂箱升级配方中的毒藤换成仙人掌。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/434)）
+* 加入了输入仓（ME）[^13]的配方。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/435)）
+* 加入了使用UEV+超导制作超导线圈方块的配方。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/435)）
+* 加入了使用电路组装机制造TPS卡的配方。（by POPlol333 [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/436)）
+* 粗制超立方体的较低级DTPF配方需求线圈从海珀珍降为无尽。（by POPlol333 [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/438)）
+* 将原钨钢线圈相关配方的材料都换为新的钛-铂-钒（TPV），以适配TPV线圈实装。[^13]（by Steelux [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/363)）
+* 将AFB的三个配方合并，任意IV电路板都可以作为原料。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/441)）
+* 缩短了热钽锭的烧制时间。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/440)）
+* 将EIO双层电容配方改为使用钽螺栓，并且将银制电容配方需求的银螺栓减半。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/440)）
+* 加入了UHV以上等级线缆二极管的配方。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/442)）
+* 小幅更改了铝酸钠相关的配方。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/443)）
+* 将ME流体存储组件合成ME流体存储元件的配方格雷化。（by OneEyeMaker [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/445)）
+* 加入UMV变压器的合成配方。（by BlueWeabo [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/446)）
+* 使用ModularUI重写了GUI。（by miozune [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/447)）
+
+### NEI Addons
+* 版本号：1.12.19 → 1.12.22
+* 加入了对蜜蜂愉快属性的描述。（by kuba6000 [相关pr1](https://github.com/GTNewHorizons/neiaddons/pull/4) [相关pr2](https://github.com/GTNewHorizons/neiaddons/pull/4)）
+* 使NEIAddons不会为每个`AEBaseGui`的子类添加默认的handler。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/neiaddons/pull/6)）
+
+### NotEnoughEnergistics
+* 版本号：1.3.21 → 1.3.23
+* 使流体样板终端支持优先级调整模式。（即可以切换同矿辞物品）（by asdflj [相关pr](https://github.com/GTNewHorizons/NotEnoughEnergistics/pull/23)）
+
+### NotEnoughItems
+* 版本号：2.3.7-GTNH → 2.3.15-GTNH
+* 在AE2压印器配方可用机器中加入了AE2 Stuff的高级压印器。（by miozune [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/306)）
+* 删除了书签物品重排动画，禁用了相关功能，修复了从NEI书签将物品拖入样板终端时崩溃的bug。（by slprime [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/307)）
+* 修复了用Ctrl+Shift+A收藏输出单种物品大于64个的配方时，无法正确收藏输出物品数量的bug。（by slprime [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/308)）
+* 修复了大型硅岩反应堆和硅岩燃料精炼厂的NEI配方页面顶部灰条略微错位的问题。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/309)）
+* 修复了使用NotEnoughResources Mod会导致`ArrayIndexOutofBoundException`崩溃的bug。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/312)）
+* 添加了不优化GUI重叠计算的设置选项，使得某些GUI可以拖动到任意位置而不被NEI原有的GUI部分覆盖。（by miozune [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/314)）
+* 只有物品列表真的被修改时，才会将其标记为`dirty`。修复了当安装GT6时，每次打开物品栏，NEI物品列表都会重载的bug。（by makamys [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/316)）
+* 修复了单方块硅岩发电机NEI配方左侧的可用机器显示不准确的问题。（by miozune [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/318)）
+* 将丹格特蒸馏塔加入了NEI蒸馏室配方左侧的可用机器中。（by miozune [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/319)）
+
+### NotEnoughIDs
+* 版本号：1.4.3.4 → 1.4.4
+* 新建GitHub仓库，加入了反编译的代码。（by boubou19）
 
 ### OpenComputers（开放式电脑）
 * 版本号：1.7.7.2-GTNH → 1.8.0.0-GTNH-pre
