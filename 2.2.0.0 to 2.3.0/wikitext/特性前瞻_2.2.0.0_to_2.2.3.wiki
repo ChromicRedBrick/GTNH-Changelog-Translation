@@ -1,84 +1,58 @@
-__TOC__
-
+[[Category:新特性前瞻]]
+[[Category:Changelog]]
 {{Quote|Stable is not the end of the world. So we push fixes.|DreamMasterXXL<ref>[https://discord.com/channels/181078474394566657/603348502637969419/1023515971840913408 出处]</ref>}}
+{{#html:MathJax}}
 
-<span id="2.2.0.0-到-2.2.3-特性前瞻"></span>
-= 2.2.0.0 到 2.2.3 特性前瞻 =
+== 2.2.0.0 到 2.2.3 特性前瞻 ==
 
 本条目只包括2.2.0.0发布之后，直到2.2.3发布为止的新特性。“相关pr”“相关commit”链接到的是GitHub上对应特性的原始提交内容。
 
 不代表全部更新内容。
 
-<span id="更新前的注意事项"></span>
-== 更新前的注意事项 ==
+=== 更新前的注意事项 ===
 
 关于GTNH版本号格式的变动：以后GTNH的版本号将会变为三位数字，意为：<稳定版本号>.<重要更新版本号>.<修复版本号> {{黑幕|如果没看懂，想想Minecraft原版的版本号格式，应该就明白了}} <ref>"I changed it because we want to use 3 digits from now on: stable.major-change.fix." [https://discord.com/channels/181078474394566657/401118216228831252/1027282245477736530 by DreamMasterXXL]</ref>
 
-<span id="mod文件变动"></span>
-== Mod文件变动 ==
+2.2.3属于测试版，存在相当数量的bug，请谨慎更新。
 
-* 版本格式变动的Mod
+=== Mod文件变动 ===
+* 版本格式变动的Mod：
 ** OpenPrinter：改为-GTNH版本。
-* 移除的Mod
+* 移除的Mod：
 ** Command Blocks for Better Questing
 ** QuestBook
 ** StandardQuestingPack
 
 （注：移除的原因，见下面BetterQuesting的更新内容。）
 
-<span id="mod更新"></span>
-== Mod更新 ==
-
-<span id="ae2fluidcraft-reworkae2fc"></span>
-=== AE2FluidCraft-Rework（AE2FC） ===
-
+=== Mod更新 ===
+==== AE2FluidCraft-Rework（AE2FC） ====
 * 合成计划预览界面的物品现在支持添加/删除NEI书签。（by asdflj [https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/20 相关pr]）
 * 原材料缓存仓现在有了实时显示流体储量的tooltip，鼠标移动到相应流体上可查看。（by asdflj [https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/20 相关pr]）
 * AE2FC的相关方块现在支持EIO流体导管。（by GlodBlock [https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/21 相关pr]）
 * AE2FC的ME流体输出总线现在支持合成卡。（by GlodBlock [https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/22 相关pr]）
-
-<span id="applied-energistics-2-unofficialae2"></span>
-=== Applied-Energistics-2-Unofficial（AE2） ===
-
+==== Applied-Energistics-2-Unofficial（AE2） ====
 * 加入了P2P通道-ME接口，又称为“镜像接口”，可以将ME接口的内容“复制”到多个P2P输出端口。<ref>目前只有物品版本的P2P通道-ME接口，流体版本会在以后更新中加入。</ref>（by kuba6000 [https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/183 相关pr] [https://discord.com/channels/181078474394566657/295669878222880769/1026078863794634782 discord特性前瞻]）
 * 修复了流体处理样板终端设置的单格物品数量超过127时会变为负数的bug。（by GlodBlock [https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/188 相关pr]）
 * ME存储总线设置界面的虚拟物品槽位中放置的物品，其格子右下角不再显示数量”1”。（by GlodBlock [https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/188 相关pr]）
-
-<span id="bartworks"></span>
-=== Bartworks ===
-
+==== Bartworks ====
 * 加入了两种新等级的强化硼玻璃方块。（by BlueWeabo [https://github.com/GTNewHorizons/bartworks/pull/208 相关pr]）
 ** 无尽强化硼玻璃方块：UIV等级玻璃；
 ** 超时空金属强化硼玻璃方块：UMV等级玻璃。
-
-<span id="betterquesting更好的任务"></span>
-=== BetterQuesting（更好的任务） ===
-
+==== BetterQuesting（更好的任务） ====
 * StandardExpansion, QuestBook, CB4BQ三个BetterQuesting附属Mod整合到了BetterQuesting中。（by eigenraven [https://github.com/GTNewHorizons/BetterQuesting/pull/78 相关pr-1] [https://github.com/GTNewHorizons/BetterQuesting/pull/79 相关pr-2]）
 * Mod config增加了浏览模式中属性为UNLOCKED的未解锁任务线可见性切换的选项，默认开启。（也就是修复了2.2.0.0任务书浏览模式后续任务栏不可见的问题）（by Glease [https://github.com/GTNewHorizons/BetterQuesting/pull/76 相关pr]）
 * 移植了部分1.12.2版本BetterQuesting的特性。（by Glease [https://github.com/GTNewHorizons/BetterQuesting/pull/76 相关pr]）具体为：
 ** 可以通过聊天栏分享任务。
 ** 玩家在使用了编辑模式-任务编辑界面中的“重置任务”按钮后，会被标记为”dirty”。
 ** 任务书章节界面上方的“完成进度”现在会自适应调整字号。
-
-<span id="botanic-horizons"></span>
-=== Botanic-horizons ===
-
+==== Botanic-horizons ====
 * 修复了花药台配方不支持藤蔓的bug。（by combusterf [https://github.com/GTNewHorizons/Botanic-horizons/pull/17 相关pr]）
-
-<span id="endercore"></span>
-=== EnderCore ===
-
+==== EnderCore ====
 * EIO流体导管设置界面可以拖动NEI中的GT“流体片”配置。（by miozune [https://github.com/GTNewHorizons/EnderCore/pull/10 相关pr]）
-
-<span id="forestrymc林业"></span>
-=== ForestryMC（林业） ===
-
+==== ForestryMC（林业） ====
 * 修复了林业工作台中保存有无效配方时会导致进入存档崩溃的bug。（by Glease [https://github.com/GTNewHorizons/ForestryMC/pull/30 相关pr]）
-
-<span id="gt5-unofficial格雷科技"></span>
-=== GT5-Unofficial（格雷科技） ===
-
+==== GT5-Unofficial（格雷科技） ====
 * 修复了黑青铜搅拌-电解配方未配平的问题。（by Glease [https://github.com/GTNewHorizons/GT5-Unofficial/pull/1422 相关pr]）
 * 使用三录仪扫描集成矿石处理厂时会显示当前并行数。（by boubou19 [https://github.com/GTNewHorizons/GT5-Unofficial/pull/1426 相关pr]）
 * 修复了部分mod魔改配方失效的bug。（by Glease [https://github.com/GTNewHorizons/GT5-Unofficial/pull/1423 相关pr]）
@@ -99,10 +73,7 @@ __TOC__
 * 现在大型热交换机可以处理太阳能盐，1L热太阳能盐=1000L过热蒸汽，而最大过热蒸汽产量等同于热冷却液。（by Steelux8 [https://github.com/GTNewHorizons/GT5-Unofficial/pull/1444 相关pr]）
 * 处理阵列新增批处理模式，剪线钳Shift+右键切换。批处理模式可以为配方加上一个由输入原料量决定的并行系数，这个系数最大为128。最终的输入、输出为最大并行*并行系数，同时配方处理时间也为原时间*并行系数。批处理模式可以极大降低处理阵列造成的延迟，但不会增加其生产效率。（by S4mpsa [https://github.com/GTNewHorizons/GT5-Unofficial/pull/1446 相关pr]）
 * nerf铟蜂：禁止通过诱变培育，杂交概率降至1%，初始速度改为“最慢”。（by Runakai1 [https://github.com/GTNewHorizons/GT5-Unofficial/pull/1442 相关pr]）
-
-<span id="gtplusplusgt"></span>
-=== GTplusplus（GT++） ===
-
+==== GTplusplus（GT++） ====
 * 修复了工业搅拌机输入总线独立失效的bug。（by minecraft7771 [https://github.com/GTNewHorizons/GTplusplus/pull/379 相关pr]）
 * 合金冶炼炉部分配方更改。（by boubou19 [https://github.com/GTNewHorizons/GTplusplus/pull/382 相关pr]）
 ** 制作熔融铊的配方输出从3/4锭（108mB）改为2锭（288mB）。
@@ -116,83 +87,49 @@ __TOC__
 ** UV+玻璃解锁激光仓，UEV+玻璃解锁所有等级能源仓。
 ** 支持超过MAX电压的超频。
 ** Shift+右键切换输入总线独立。
-
-<span id="goodgenerator"></span>
-=== GoodGenerator ===
-
+==== GoodGenerator ====
 * 修复了无法扫描YOT流体单元方块T9和T10配方的bug。（by miozune [https://github.com/GTNewHorizons/GoodGenerator/pull/89 相关pr]）
+==== KekzTech ====
+* 修改了兰波顿超级电容库计算平均输入输出的方式。<ref>会导致进入存档崩溃，解决方法为手动更新KekzTech。 </ref>（by TrainerSnow [https://github.com/GTNewHorizons/KekzTech/pull/43 相关pr]）
 
-<span id="kekztech"></span>
-=== KekzTech ===
-
-* 修改了兰波顿超级电容库计算平均输入输出的方式。<ref> 会导致进入存档崩溃，解决方法为手动更新TecTech。 </ref>（by TrainerSnow [https://github.com/GTNewHorizons/KekzTech/pull/43 相关pr]）
-
-<span id="kubatech"></span>
-=== KubaTech ===
-
+==== KubaTech ====
 * 工业屠宰场在超频到1t之后会按4/4的模式继续增加并行。（by kuba6000 [https://github.com/GTNewHorizons/KubaTech/pull/25 相关pr]）
-
-<span id="logisticspipes物流管道"></span>
-=== LogisticsPipes（物流管道） ===
-
+==== LogisticsPipes（物流管道） ====
 * 修复了NEI幽灵物品拖放功能在物流管道中失效的bug。（by miozune [https://github.com/GTNewHorizons/LogisticsPipes/pull/12 相关pr]）
-
-<span id="mx-random"></span>
-=== MX-Random ===
-
+==== MX-Random ====
 * 修复了从大型分子装配室中取走数据球导致的游戏崩溃问题。（by eigenraven [https://github.com/GTNewHorizons/MX-Random/pull/5 相关pr]）
-
-<span id="newhorizonscoremod"></span>
-=== NewHorizonsCoreMod ===
-
+==== NewHorizonsCoreMod ====
 * 统一了组装机制作Ztones方块配方使用编程电路的格式，即对应序号的方块使用对应编程电路。（by miozune [https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/423 相关pr]）
 * Buff了蒸汽时代的一些配方。（by Connor-Colenso [https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/422 相关pr]）
 ** 研磨燧石：80s → 40s；
 ** 将部分合金炉配方蒸汽需求量减为原来的一半；
 ** 合金炉制作玻璃管：12s → 6s。
-
-<span id="realistic-world-gen真实世界生成"></span>
-=== Realistic-World-Gen（真实世界生成） ===
-
+==== Realistic-World-Gen（真实世界生成） ====
 * 撤销了上版本中噪声生成器的变动，修复了世界生成高山过多、群系混乱的问题。（by eigenraven [https://github.com/GTNewHorizons/Realistic-World-Gen/pull/3 相关pr]）
-
-<span id="storagedrawers储物抽屉"></span>
-=== StorageDrawers（储物抽屉） ===
-
+==== StorageDrawers（储物抽屉） ====
 * 现在破坏抽屉时会掉落更少堆叠的物品，减少可能发生的卡死或崩溃。（掉落物品总量不变）（by wohaopa [https://github.com/GTNewHorizons/StorageDrawers/pull/17 相关pr]）
-
-<span id="tc4tweaks"></span>
-=== TC4Tweaks ===
-
+==== TC4Tweaks ====
 * 修复了神秘时代注魔配方不稳定度过高会导致游戏崩溃的bug。（by Alexdoru [https://github.com/GTNewHorizons/TC4Tweaks/pull/11 相关pr]）
-
-<span id="tectech"></span>
-=== TecTech ===
-
+==== TecTech ====
 * 修复了结构搭建中特斯拉电塔无法识别LuV线圈的bug。（by albus12138 [https://github.com/GTNewHorizons/TecTech/pull/104 相关pr]）
-
-<span id="tinkersconstruct匠魂"></span>
-=== TinkersConstruct（匠魂） ===
-
+==== TinkersConstruct（匠魂） ====
 * 匠魂冶炼炉GUI中按Shift现在会精确显示流体的量(mB)。（by Glease [https://github.com/GTNewHorizons/TinkersConstruct/pull/56 相关pr]）
-
-<span id="visualprospecting"></span>
-=== VisualProspecting ===
-
+==== VisualProspecting ====
 * 使用流体名而非ID保存扫描到的流体，修复了更新游戏后可能造成小地图流体显示错乱的bug。（by eigenraven [https://github.com/GTNewHorizons/VisualProspecting/pull/21 相关pr]）
 
-== 任务书及配置文件更新 ==
+=== 任务书及配置文件更新 ===
 
 * 修复了数十条任务书文本的问题。（by chochem &amp; Steelux8 [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11485 相关pr1] [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11522 相关pr2] [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11552 相关pr3] [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11576 相关pr4]）
 * 植物魔法任务线扩充。（by hallucinogender [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11534 相关pr1] [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11550 相关pr2] [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11554 相关pr3]）
 * 无尽、海珀珍、永恒三种线圈的任务增加了大量传说风格的叙述文本。（by Steelux8 [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11576 相关pr]）
 * 修复了水晶缠绕宇宙中子法杖无法合成的bug。（by wohaopa [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11515 相关pr]）
 
-<span id="说明"></span>
-== 说明 ==
+=== 说明 ===
 特性前瞻并非全部更新内容，详细的Changelog请去GitHub查看。
 
 [https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/releases/changelogs/changelog%20from%202.2.0.0%20to%202.2.3.md 点我]查看完整Changelog。
 
 [https://github.com/ChromicRedBrick/GTNH-Changelog-Translation/blob/main/2.2.0.0%20to%202.3.0/markdown/Changelog_from_2.2.0.0_to_2.2.3.md 这里]还有完整Changelog的中文版。
-<references />
+
+==注释==
+{{Reflist|30em}}
