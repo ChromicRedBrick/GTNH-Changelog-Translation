@@ -541,7 +541,7 @@
 
 ### TecTech
 * 版本号：5.0.42 → 5.0.52
-* 将高阶电路板制造配方中的小型线圈换成贴片电感。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/TecTech/pull/105)）
+* 将高阶电路板制造配方中的小型线圈换成贴片电感。[^16]（by GlodBlock [相关pr](https://github.com/GTNewHorizons/TecTech/pull/105)）
 * 修复了末影流体覆盖板无法正确处理存储信息导致不断发送日志的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/TecTech/pull/107)）
 * 对数据访问仓使用了新的API，解决了延迟问题。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/TecTech/pull/108)）
 * 移除了UHV部分部件的装配线配方需求的润滑油。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/TecTech/pull/110)）
@@ -576,7 +576,7 @@
 
 ### TinkersGregworks
 * 暂时未发布新版本。
-* 修复了匠魂器具的本地化问题。（by iouter [相关pr])(https://github.com/GTNewHorizons/TinkersGregworks/pull/10)）
+* 修复了匠魂器具的本地化问题。（by iouter [相关pr](https://github.com/GTNewHorizons/TinkersGregworks/pull/10)）
 
 ### TX Loader
 * 版本号：1.1（新Mod）
