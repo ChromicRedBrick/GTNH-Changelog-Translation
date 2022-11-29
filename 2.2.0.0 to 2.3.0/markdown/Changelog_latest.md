@@ -295,7 +295,7 @@
 * 回退了对无菌农场机械方块造价的nerf，并且调整藻类农场控制器方块的造价为MV级别。（by Steelux8 [相关pr1](https://github.com/GTNewHorizons/GTplusplus/pull/397) [相关pr2](https://github.com/GTNewHorizons/GTplusplus/pull/402)）
 * 将无尽突变催化剂配方的输出从1调整为5，以匹配输入消耗的5个催化剂外壳。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/398)）
 * 修复了GT++材料不显示本地化的bug。（by iouter [相关pr1](https://github.com/GTNewHorizons/GTplusplus/pull/395) [相关pr2](https://github.com/GTNewHorizons/GTplusplus/pull/404) [相关pr3](https://github.com/GTNewHorizons/GTplusplus/pull/405)）
-* 由于TPV线圈的加入[^13]，修改了化工厂手册的描述。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/409)）
+* 由于TPV线圈的加入[^14]，修改了化工厂手册的描述。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/409)）
 * 修复了作物管理器在log中`NoSuchElementException`刷屏的bug。（by guineawheek [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/408)）
 * 修复了硫镉矿石电解配方产出过多的问题。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/410)）
 * 修复了氯乙酸混合物制作配方不返还空单元的问题。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/410)）
@@ -316,7 +316,7 @@
 * 移除了涡轮材质的反射。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/439)）
 * 用`static`修饰所有结构定义field。（by Glease [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/443)）
 
-[^13]: 见GT5 Unofficial（格雷科技）更新部分。
+[^14]: 见GT5 Unofficial（格雷科技）更新部分。
 
 ### HarvestCraft（潘马斯）
 * **未知更新**
@@ -389,7 +389,7 @@
 ### KubaTech
 * 版本号：0.5.11 → 0.6.4
 * 禁止工业屠宰场主方块任意旋转（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/27)）
-* 加入了巨型工业蜂箱/繁殖站（Industrial Apicultural Acclimatiser and Drone Domestication Station，简称Mega Apiary）[^14]。旨在为后期提供更高效率的蜜蜂生产方案。（by kuba6000 [相关pr1](https://github.com/GTNewHorizons/KubaTech/pull/26) [相关pr2](https://github.com/GTNewHorizons/KubaTech/pull/28) [相关pr3](https://github.com/GTNewHorizons/KubaTech/pull/29) [相关pr4](https://github.com/GTNewHorizons/KubaTech/pull/31)）
+* 加入了巨型工业蜂箱/繁殖站（Industrial Apicultural Acclimatiser and Drone Domestication Station，简称Mega Apiary）[^15]。旨在为后期提供更高效率的蜜蜂生产方案。（by kuba6000 [相关pr1](https://github.com/GTNewHorizons/KubaTech/pull/26) [相关pr2](https://github.com/GTNewHorizons/KubaTech/pull/28) [相关pr3](https://github.com/GTNewHorizons/KubaTech/pull/29) [相关pr4](https://github.com/GTNewHorizons/KubaTech/pull/31)）
   * 定位为UV+机器。
   * 该机器有三种运行模式：输入模式、输出模式、工作模式。这三种模式的切换和用途与极限工业温室类似。
   * 工作模式分为两种子模式：普通(Normal)模式和蜂群(Swarmer)模式。
@@ -399,7 +399,7 @@
 * 将工业屠宰场对武器损耗的判定改为`hitEntity`，从而修复了部分实际使用时不会消耗耐久的武器在工业屠宰场中会消耗耐久的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/32)）
 * 将Mod中mixin的部分改为调用GTNH Mixins。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/33)）
 
-[^14]: 这是一台机器的名字。
+[^15]: 这是一台机器的名字。
 
 ### LogisticsPipes（物流管道）
 * 版本号：0.9.4.5.8-GTNH → 0.9.4.5.9-GTNH
@@ -421,6 +421,11 @@
 * 版本号：2.4.5-GTNH → 2.4.6-GTNH
 * 取消了开发环境以外的debug log。（by miozune [相关pr](https://github.com/GTNewHorizons/MouseTweaks/pull/2)）
 
+### NEI Addons
+* 版本号：1.12.19 → 1.12.22
+* 加入了对蜜蜂愉快属性的描述。（by kuba6000 [相关pr1](https://github.com/GTNewHorizons/neiaddons/pull/4) [相关pr2](https://github.com/GTNewHorizons/neiaddons/pull/4)）
+* 使NEIAddons不会为每个`AEBaseGui`的子类添加默认的handler。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/neiaddons/pull/6)）
+
 ### NewHorizonsCoreMod
 * 版本号：1.9.83 → 1.9.107
 * 在高阶电路配方中使用贴片电感替代小型线圈。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/424)）
@@ -431,7 +436,7 @@
 * 移除了配方中的所有0号电路板。（by miozune [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/431)）
 * 移除了氧化锌的高炉配方，用焙烧锌取代。（by miozune [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/433)）
 * 将蜂箱升级配方中的毒藤换成仙人掌。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/434)）
-* 加入了输入仓（ME）[^13]的配方。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/435)）
+* 加入了输入仓（ME）[^14]的配方。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/435)）
 * 加入了使用UEV+超导制作超导线圈方块的配方。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/435)）
 * 加入了使用电路组装机制造TPS卡的配方。（by POPlol333 [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/436)）
 * 粗制超立方体的较低级DTPF配方需求线圈从海珀珍降为无尽。（by POPlol333 [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/438)）
@@ -444,11 +449,6 @@
 * 将ME流体存储组件合成ME流体存储元件的配方格雷化。（by OneEyeMaker [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/445)）
 * 加入UMV变压器的合成配方。（by BlueWeabo [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/446)）
 * 使用ModularUI重写了GUI。（by miozune [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/447)）
-
-### NEI Addons
-* 版本号：1.12.19 → 1.12.22
-* 加入了对蜜蜂愉快属性的描述。（by kuba6000 [相关pr1](https://github.com/GTNewHorizons/neiaddons/pull/4) [相关pr2](https://github.com/GTNewHorizons/neiaddons/pull/4)）
-* 使NEIAddons不会为每个`AEBaseGui`的子类添加默认的handler。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/neiaddons/pull/6)）
 
 ### NotEnoughEnergistics
 * 版本号：1.3.21 → 1.3.23
@@ -471,67 +471,116 @@
 * 新建GitHub仓库，加入了反编译的代码。（by boubou19）
 
 ### OpenComputers（开放式电脑）
-* 版本号：1.7.7.2-GTNH → 1.8.0.0-GTNH-pre
-* 同步更新了源mod仓库的最新代码。（by asiekierka [相关pr](https://github.com/GTNewHorizons/OpenComputers/pull/81)）
+* 版本号：1.8.0.0-GTNH-pre → 1.8.0.1-GTNH
+* 加入了一次请求即可获取全部刻时间列表的方法：`getAllTickTimes`。（by boubou19 [相关pr](https://github.com/GTNewHorizons/OpenComputers/pull/82)）
+* 更新build script，并且提高了`ScalaCompile`的RAM上限，以防止编译Mod时崩溃。（by eigenraven [相关pr](https://github.com/GTNewHorizons/OpenComputers/pull/83)）
 
-### OpenPrinter
-* 版本号：0.1.0.132 → 0.1.2-GTNH
-* 更新了构筑。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/OpenPrinter/pull/3)）
+### ProjectRed（红石计划）
+* 版本号：4.7.7-GTNH → 4.7.9-GTNH
+* 为脉冲发生器加入1 tick脉冲模式。（by greesyB [相关pr](https://github.com/GTNewHorizons/ProjectRed/pull/20)）
+* 移除螺丝刀耐久度，但是因为GT5u后来加入了对红石计划螺丝刀的支持，所以又撤回了此更改，相当于未发生改动。（by greesyB [相关pr1](https://github.com/GTNewHorizons/ProjectRed/pull/21) [相关pr2](https://github.com/GTNewHorizons/ProjectRed/pull/22)）
 
-### Realistic-World-Gen（真实世界生成）
-* 版本号：alpha-1.3.2.1 → alpha-1.3.3.0
-* 撤销了上版本中噪声生成器的变动，修复了世界生成高山过多、群系混乱的问题。（by eigenraven [相关pr](https://github.com/GTNewHorizons/Realistic-World-Gen/pull/3)）
-
-### SleepingBags
-* 版本号：0.1.3 → 0.1.4
-* 添加了俄语语言文件。（by Eldrinn-Elantey [相关pr](https://github.com/GTNewHorizons/SleepingBags/pull/3)）
+### Railcraft（真实世界生成）
+* 版本号：9.13.12 → 9.13.14
+* 移除了英语语言文件(en_US.lang)开头的BOM（字节顺序标记）。（by Discreater [相关pr](https://github.com/GTNewHorizons/Railcraft/pull/31)）
+* 修复了高级焦炉可以将木炭处理成焦煤的bug。（by Cleptomania [相关pr](https://github.com/GTNewHorizons/Railcraft/pull/32)）
 
 ### StorageDrawers（储物抽屉）
-* 版本号：1.11.17-GTNH → 1.11.18-GTNH
-* 现在破坏抽屉时会掉落更少堆叠的物品，减少可能发生的卡死或崩溃。（掉落物品总量不变）（by wohaopa [相关pr](https://github.com/GTNewHorizons/StorageDrawers/pull/17)）
+* 版本号：1.11.18-GTNH → 1.11.19-GTNH
+* 修复了储物抽屉读取库存的方法与其他Mod无法兼容的问题。这个问题会导致T键寻找物品对抽屉失效、懒人厨房无法读取抽屉物品等等。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/StorageDrawers/pull/18)）
+
+### StructureCompat
+* 版本号：0.2.0 → 0.3.0
+* 修复了与Hodgepodge的兼容性问题。（by Glease [相关commit](https://github.com/GTNewHorizons/StructureCompat/commit/717fc37ce388cbf8e20814faff3d112d979dc9b0)）
+
+### StructureLib
+* 版本号：未定
+* 加入了Debug结构打印机。比TecTech的同名机器功能更完善。（by matt-159 [相关pr](https://github.com/GTNewHorizons/StructureLib/pull/17)）
 
 ### TC4Tweaks
-* 版本号：1.4.16 → 1.4.18
-* 修复了神秘时代注魔配方不稳定度过高会导致游戏崩溃的bug。（by Alexdoru [相关pr](https://github.com/GTNewHorizons/TC4Tweaks/pull/11)）
+* 版本号：1.4.18 → 1.4.19-GTNH
+* 修复了`hashCode`的生成问题。（by Glease [相关commit](https://github.com/GTNewHorizons/TC4Tweaks/commit/3dff3d97e1721cb0405f96a418d09d7a6a8b616b)）
+* 不再给假玩家增加扭曲值，以防止崩溃。（by Glease [相关commit](https://github.com/GTNewHorizons/TC4Tweaks/commit/fbb2fd8d57a16d071e957d2053a709720b58cd00)）
+* 优化了`canNodeBeSeen`，解决了潜在的突发高延迟问题。（by Glease [相关commit](https://github.com/GTNewHorizons/TC4Tweaks/commit/25e776c0d0486406241d81d42f548ca0206225f9)）
+* 允许使用滚轮滚动研究页面。（by Glease [相关commit1](https://github.com/GTNewHorizons/TC4Tweaks/commit/8bde2dfcf45d9c2b508223494d75fc89a1794bbd) [相关commit2](https://github.com/GTNewHorizons/TC4Tweaks/commit/25e776c0d0486406241d81d42f548ca0206225f9)）
+
+### TCNEIAdditions
+* 版本号：1.1.1.5 → 1.1.1.7
+* 使设置选项能够本地化。（by miozune [相关pr](https://github.com/GTNewHorizons/TCNEIAdditions/pull/15)）
+* 将鼠标移动至NEI神秘时代相关配方页面“研究名称”(Research name)词条上，会显示解锁该研究所需的所有前置条件和完成情况。（by iouter [相关pr](https://github.com/GTNewHorizons/TCNEIAdditions/pull/16)）
 
 ### TecTech
-* 版本号：5.0.39 → 5.0.42
-* 修复了文本显示可能超出屏幕范围的问题。（by Connor-Colenso [相关pr](https://github.com/GTNewHorizons/TecTech/pull/102)）
-* 修复了结构搭建中特斯拉电塔无法识别LuV线圈的bug。（by albus12138 [相关pr](https://github.com/GTNewHorizons/TecTech/pull/104)）
-* 修正了重复的本地化key。（by iouter [相关pr](https://github.com/GTNewHorizons/TecTech/pull/103)）
+* 版本号：5.0.42 → 5.0.52
+* 将高阶电路板制造配方中的小型线圈换成贴片电感。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/TecTech/pull/105)）
+* 修复了末影流体覆盖板无法正确处理存储信息导致不断发送日志的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/TecTech/pull/107)）
+* 对数据访问仓使用了新的API，解决了延迟问题。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/TecTech/pull/108)）
+* 移除了UHV部分部件的装配线配方需求的润滑油。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/TecTech/pull/110)）
+* 修复了末影流体覆盖板可以跨存档传输流体的bug。（by minecraft7771 [相关pr1](https://github.com/GTNewHorizons/TecTech/pull/112) [相关pr2](https://github.com/GTNewHorizons/TecTech/pull/113)）
+* 加入了完整方块版本的光缆、激光真空管、量子隧道。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/TecTech/pull/111)）
+* 使用ModularUI重写了GUI。（by miozune [相关pr](https://github.com/GTNewHorizons/TecTech/pull/114)）
+* 加入了UMV多安动力仓/能源仓和UIV/UMV激光仓的合成配方。（by BlueWeabo [相关pr](https://github.com/GTNewHorizons/TecTech/pull/115)）
+
+[^16]: 参见NewHorizonsCoreMod更新内容。
+
+### ThaumicEnergistics（神秘能源）
+* 版本号：1.3.19-GTNH → 1.3.21-GTNH
+* 修复了与源质冷凝器的交互会导致物品复制的bug。[^17]（by repo-alt [相关pr](https://github.com/GTNewHorizons/ThaumicEnergistics/pull/24)）
+* 为源质存储元件加入了过滤源质种类信息的tooltip。（by dipo33 [相关pr](https://github.com/GTNewHorizons/ThaumicEnergistics/pull/25)）
+* 允许多个奥术装配室并行处理同一个配方。（by greesyB [相关pr](https://github.com/GTNewHorizons/ThaumicEnergistics/pull/27)）
+
+[^17]: 参见Applied Energistics 2 Unofficial（AE2）更新内容。
 
 ### ThaumicHorizons（神秘视界）
-* 版本号：1.2.1.6 → 1.2.1.7
-* 删除了语言文件中的重复key。（by ChromicRedBrick [相关pr](https://github.com/GTNewHorizons/ThaumicHorizons/pull/36)）
+* 版本号：1.2.1.7 → 1.2.1.8
+* 移除了`getStackTrace`检测，以修复服务器卡顿的问题。（by pulsemageadvocate [相关pr](https://github.com/GTNewHorizons/ThaumicHorizons/pull/37)）
+
+### Thaumic Insurgence（神秘革命）
+* 版本号：0.0.6 → 0.0.8
+* 修正了英语语言文件(en_US.lang)的文本错误。(by Alastors [相关commit](https://github.com/GTNewHorizons/thaumicinsurgence/commit/3f4f5ed408dc6864fdab07e916b0af9e3bd20c5a))
+* 精简了注魔截流者(infusion inteceptor)的代码，并且buff了注魔截流者，使其能够1 tick输出所有源质。（by greesyB [相关pr](https://github.com/GTNewHorizons/thaumicinsurgence/pull/12)）
 
 ### TinkersConstruct（匠魂）
-* 版本号：1.9.4-GTNH → 1.9.6-GTNH
-* 匠魂冶炼炉GUI中按Shift现在会精确显示流体的量(mB)。（by Glease [相关pr](https://github.com/GTNewHorizons/TinkersConstruct/pull/56)）
-* 主动更新排液口比较器的输出。（by Glease [相关pr](https://github.com/GTNewHorizons/TinkersConstruct/pull/57)）
+* 版本号：1.9.6-GTNH → 1.9.7-GTNH
+* 修复了粘土铸件覆盖了铝黄铜铸件的注册名的问题。（by DrParadox7 [相关pr](https://github.com/GTNewHorizons/TinkersConstruct/pull/58)）
+* 加入了熔融石英的材质。（by DrParadox7 [相关pr](https://github.com/GTNewHorizons/TinkersConstruct/pull/58)）
 
-### TwilightForest（暮色森林）
-* 版本号：2.3.8.16 → 2.3.8.17
-* 删除了语言文件中的重复key。（by ChromicRedBrick [相关pr](https://github.com/GTNewHorizons/twilightforest/pull/17)）
+### TinkeysGregworks
+* 修复了匠魂器具的本地化问题。（by iouter [相关pr])(https://github.com/GTNewHorizons/TinkersGregworks/pull/10)）
+
+### TX Loader
+* 版本号：1.1（新Mod）
+* 该Mod会创建两个特殊的目录，可以用于加载资源。
+  * `./config/txloader/load/`与资源包的作用相同。
+  * `./config/txloader/forceload/`中的文件可以覆盖Minecraft `assets`对应位置的文件。
 
 ### VisualProspecting
-* 版本号：1.0.33 → 1.0.34
-* 使用流体名而非ID保存扫描到的流体，修复了更新游戏后可能造成小地图流体显示错乱的bug。（by eigenraven [相关pr](https://github.com/GTNewHorizons/VisualProspecting/pull/21)）
-
-### WarpTheory
-* 版本号：1.2.6-GTNH → 1.2.7-GTNH
-* 修复了config选项中allowWarpEffects处理不正确的问题。（by skizzerz [相关pr](https://github.com/GTNewHorizons/WarpTheory/pull/24)）
-* 修复了游戏中扭曲守护效果可能永久激活的bug。（by skizzerz [相关pr](https://github.com/GTNewHorizons/WarpTheory/pull/24)）
+* 版本号：1.0.34 → 1.0.36
+* 移除了IFU相关的mixin，改用本地集成。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/VisualProspecting/pull/22)）
+* 更新了build script，并应用了GTNHMixins。（by dipo33 [相关pr](https://github.com/GTNewHorizons/VisualProspecting/pull/23)）
 
 ## 任务书及配置文件更新
-* 修复了数十条任务书文本的问题。（by chochem & Steelux8 [相关pr1](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11485) [相关pr2](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11522) [相关pr3](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11552) [相关pr4](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11576)）
-* 植物魔法任务线扩充。（by hallucinogender [相关pr1](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11534) [相关pr2](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11550) [相关pr3](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11554)）
-* 无尽、海珀珍、永恒三种线圈的任务增加了大量传说风格的叙述文本。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11576)）
-* 更新了默认服务器列表，加入了Zvezdolet GTNH 2.0和Zvezdolet GTNH Hardcore两个服务器。（by Ethryan [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11513)）
-* 修复了水晶缠绕宇宙中子法杖无法合成的bug。（by wohaopa [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11515)）
-
+* 大量修正任务书内容。（by chochem & Steelux8 [相关pr1](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11653) [相关pr2](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11672) [相关pr3](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11722) [相关pr4](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11741) [相关pr5](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11787) [相关pr6](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11852) [相关pr7](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11878)）
+* 增加了工业锻造锤、工业3D打印机、工业碎石机的任务。（by chochem [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11852)）
+* 将蜂箱升级配方从配置文件中移除，移至NewHorizonsCoreMod中。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11588)）
+* 大量更改路由管道(Logistics Pipe)的配方，主要是降低造价。（by Glease & Steelux8 [相关pr1](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11597) [相关pr2](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11642) [相关pr3](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11643)）
+* 更新了任务书中升级框架的id，因为该物品已从Gendustry（基因工业）移动至GT5u。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11600)）
+* 将AE2压印器的配方移动至配置文件脚本中。（by miozune [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11635)）
+* 加入了使用石英岩粉制造EIO石英玻璃的配方。（by Dream-Master [相关commit1](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/commit/53918e9688c7e5ddffbabb98b7b10c3715ed89fa) [相关commit2](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/commit/e7d432a10c37f13b29d68ac2cc398f8e49febdd0) [相关commit3](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/commit/89b3e59f6014b6d0e9e715020d47e4314bce2260)）
+* 将蜂窝的矿辞配置移至GT5u。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11660)）
+* 修正了关于水域菜园的一个加载界面提示。（by miozune [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11659)）
+* 在自述文件中加入了discord频道的链接。（by boubou19 [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11690)）
+* 将脚本部分改为I18N本地化。（by iouter [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11693)）
+* 修正了`motd`值拼写错误。（by ihatewindows [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11707)）
+* 临时在脚本中加入了EnderIO电容的配方。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11742)）
+* 修复了ingameinfo（IGI，游戏信息显示）显示错误的群系温度和适度的问题。（by iouter [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11745)）
+* 降低了LuV/ZPM/UV太阳能覆盖板的造价，主要降低了需求的电路板等级和超导数量。（by Tyrantgtnh [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11777)）
+* 禁用了碲/钡/镧/铈/镨/钆/镝/钬/铒/铥/镱粒的炼金复制配方。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11802)）
+* 将部分物品配方中的混沌核心改为觉醒核心，因为混沌核心现在需要UMV材料制造。（by GDCloudStrike [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11800)）
+* 在GregTech.cfg中加入了EV/IV燃气轮机的相关内容。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11827)）
+* 更新了defaultserverlist.json，加入了一个新的服务器。（by superhealing & glowredman [相关pr1](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11851) [相关pr2](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11853)）
+* 修改了部分ProjectRed（红石计划）的配方，以保持配方一致性。（by miozune [相关pr](https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11889)）
 
 
 
 > 参考文本：
-> * [Changelog from DreamAssemblerXXL](https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/releases/changelogs/changelog%20from%202.2.0.0%20to%202.2.3.md)
 > * All pull requests and commits from [GTNewHorizons repositories](https://github.com/GTNewHorizons)
