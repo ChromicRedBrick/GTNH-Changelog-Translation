@@ -510,7 +510,7 @@
 * 为脉冲发生器加入1 tick脉冲模式。（by greesyB [相关pr](https://github.com/GTNewHorizons/ProjectRed/pull/20)）
 * 移除螺丝刀耐久度，但是因为GT5u后来加入了对红石计划螺丝刀的支持，所以又撤回了此更改，相当于未发生改动。（by greesyB [相关pr1](https://github.com/GTNewHorizons/ProjectRed/pull/21) [相关pr2](https://github.com/GTNewHorizons/ProjectRed/pull/22)）
 
-### Railcraft（真实世界生成）
+### Railcraft（铁路）
 * 版本号：9.13.12 → 9.13.14
 * 移除了英语语言文件(en_US.lang)开头的BOM（字节顺序标记）。（by Discreater [相关pr](https://github.com/GTNewHorizons/Railcraft/pull/31)）
 * 修复了高级焦炉可以将木炭处理成焦煤的bug。（by Cleptomania [相关pr](https://github.com/GTNewHorizons/Railcraft/pull/32)）
