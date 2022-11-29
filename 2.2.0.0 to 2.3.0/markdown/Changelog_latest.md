@@ -82,15 +82,16 @@
 * 修复了任务书设置中主题重复的bug。（by eigenraven [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/82)）
 * 修复了在服务器中可重复任务进度不会重置的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/83)）
 
-### BloodArsenal
-* 待填
+### BloodArsenal（血液兵工厂）
+* 版本号：1.2.6 → 1.2.7
+* 修复了可携式祭坛的tooltip会导致游戏崩溃的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/BloodArsenal/pull/15)）
 
 ### BloodMagic（血魔法）
 * 版本号：1.3.16 → 1.3.18
 * 修复了当服务器请求仪式推测杖的本地化文本时会导致崩溃的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/BloodMagic/pull/35)）
 * 修正了NEI坠星仪式矿石数量估计的算式错误。（by ChromicRedBrick [相关pr](https://github.com/GTNewHorizons/BloodMagic/pull/36)）
 
-### Botania
+### Botania（植物魔法）
 * 版本号：1.9.10-GTNH → 1.9.11-GTNH
 * 修复了ManaNetworkHandler的一个内存泄漏问题。（by Glease [相关pr](https://github.com/GTNewHorizons/Botania/pull/18)）
 
@@ -329,7 +330,7 @@
 * 允许原木拟生场种植腐化树苗。（by guineawheek [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/418)）
 * GT++多方块机器控制器和结构方块配方使用材料等级统一，并且加入组装机配方便于自动化。（all by Dream-Master）
   * EV：工业焦炉（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/433)）
-  * IV：工业线缆机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/434)）、工业搅拌机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/430)）、炽焱高炉（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/435)）、工业电解机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/429)）、工业热力精炼厂（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/426)）、工业筛选机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/428)、工业洗矿厂（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/421)）、工业粉碎机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/427)）、珠海渔场（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/421)）、工业压模机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/424)）、合金冶炼炉（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/419)）、工业离心机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/437)）、工业辊压机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/437)）、工业切割机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/437)）
+  * IV：工业线缆机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/434)）、工业搅拌机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/430)）、炽焱高炉（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/435)）、工业电解机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/429)）、工业热力精炼厂（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/426)）、工业筛选机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/428)）、工业洗矿厂（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/421)）、工业粉碎机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/427)）、珠海渔场（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/421)）、工业压模机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/424)）、合金冶炼炉（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/419)）、工业离心机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/437)）、工业辊压机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/437)）、工业切割机（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/437)）
   * LuV：亚马逊仓库（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/436)）
   * UV：质量发生器（[相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/437)）
 * 修复了部分有序合成配方失效的问题。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/438)）
@@ -509,7 +510,7 @@
 * 为脉冲发生器加入1 tick脉冲模式。（by greesyB [相关pr](https://github.com/GTNewHorizons/ProjectRed/pull/20)）
 * 移除螺丝刀耐久度，但是因为GT5u后来加入了对红石计划螺丝刀的支持，所以又撤回了此更改，相当于未发生改动。（by greesyB [相关pr1](https://github.com/GTNewHorizons/ProjectRed/pull/21) [相关pr2](https://github.com/GTNewHorizons/ProjectRed/pull/22)）
 
-### Railcraft（真实世界生成）
+### Railcraft（铁路）
 * 版本号：9.13.12 → 9.13.14
 * 移除了英语语言文件(en_US.lang)开头的BOM（字节顺序标记）。（by Discreater [相关pr](https://github.com/GTNewHorizons/Railcraft/pull/31)）
 * 修复了高级焦炉可以将木炭处理成焦煤的bug。（by Cleptomania [相关pr](https://github.com/GTNewHorizons/Railcraft/pull/32)）
@@ -540,7 +541,7 @@
 
 ### TecTech
 * 版本号：5.0.42 → 5.0.52
-* 将高阶电路板制造配方中的小型线圈换成贴片电感。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/TecTech/pull/105)）
+* 将高阶电路板制造配方中的小型线圈换成贴片电感。[^16]（by GlodBlock [相关pr](https://github.com/GTNewHorizons/TecTech/pull/105)）
 * 修复了末影流体覆盖板无法正确处理存储信息导致不断发送日志的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/TecTech/pull/107)）
 * 对数据访问仓使用了新的API，解决了延迟问题。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/TecTech/pull/108)）
 * 移除了UHV部分部件的装配线配方需求的润滑油。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/TecTech/pull/110)）
@@ -573,8 +574,9 @@
 * 修复了粘土铸件覆盖了铝黄铜铸件的注册名的问题。（by DrParadox7 [相关pr](https://github.com/GTNewHorizons/TinkersConstruct/pull/58)）
 * 加入了熔融石英的材质。（by DrParadox7 [相关pr](https://github.com/GTNewHorizons/TinkersConstruct/pull/58)）
 
-### TinkeysGregworks
-* 修复了匠魂器具的本地化问题。（by iouter [相关pr])(https://github.com/GTNewHorizons/TinkersGregworks/pull/10)）
+### TinkersGregworks
+* 暂时未发布新版本。
+* 修复了匠魂器具的本地化问题。（by iouter [相关pr](https://github.com/GTNewHorizons/TinkersGregworks/pull/10)）
 
 ### TX Loader
 * 版本号：1.1（新Mod）
