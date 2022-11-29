@@ -82,15 +82,16 @@
 * 修复了任务书设置中主题重复的bug。（by eigenraven [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/82)）
 * 修复了在服务器中可重复任务进度不会重置的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/BetterQuesting/pull/83)）
 
-### BloodArsenal
-* 待填
+### BloodArsenal（血液兵工厂）
+* 版本号：1.2.6 → 1.2.7
+* 修复了可携式祭坛的tooltip会导致游戏崩溃的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/BloodArsenal/pull/15)）
 
 ### BloodMagic（血魔法）
 * 版本号：1.3.16 → 1.3.18
 * 修复了当服务器请求仪式推测杖的本地化文本时会导致崩溃的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/BloodMagic/pull/35)）
 * 修正了NEI坠星仪式矿石数量估计的算式错误。（by ChromicRedBrick [相关pr](https://github.com/GTNewHorizons/BloodMagic/pull/36)）
 
-### Botania
+### Botania（植物魔法）
 * 版本号：1.9.10-GTNH → 1.9.11-GTNH
 * 修复了ManaNetworkHandler的一个内存泄漏问题。（by Glease [相关pr](https://github.com/GTNewHorizons/Botania/pull/18)）
 
@@ -573,7 +574,8 @@
 * 修复了粘土铸件覆盖了铝黄铜铸件的注册名的问题。（by DrParadox7 [相关pr](https://github.com/GTNewHorizons/TinkersConstruct/pull/58)）
 * 加入了熔融石英的材质。（by DrParadox7 [相关pr](https://github.com/GTNewHorizons/TinkersConstruct/pull/58)）
 
-### TinkeysGregworks
+### TinkersGregworks
+* 暂时未发布新版本。
 * 修复了匠魂器具的本地化问题。（by iouter [相关pr])(https://github.com/GTNewHorizons/TinkersGregworks/pull/10)）
 
 ### TX Loader
