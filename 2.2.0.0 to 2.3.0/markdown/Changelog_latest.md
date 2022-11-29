@@ -5,7 +5,7 @@
 ## Mod更新
 
 ### AE2FluidCraft Rework（AE2FC）
-* 版本号：1.0.22-GTNH → 1.0.32-GTNH
+* 版本号：1.0.22-GTNH → 1.0.36-GTNH
 * 修复了ME增广流体样板终端保存8种物品输出的配方会出现错误的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/25)）
 * 修复了极端情况下流体样板编码可能会导致ArrayIndexOutOfBoundsException的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/26)）
 * 为流体存储元件加入了显示过滤流体种类的tooltip。（by dipo33 [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/27)）
@@ -13,12 +13,16 @@
 * 阻挡模式支持流体p2p。（by guineawheek [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/31)）
 * 修复了一个导致二合一接口无限输出流体的bug。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/32)）
 * 在流体样板终端界面Shift+左键物品栏中的样板，现在会自动将其放到样板输出格，而不是放入ME网络库存内。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/33)）
-* 加入了ME缓存指令器（ME Level Maintainer），用于让ME网络中某个物品保持在一定数量之内。支持开放式电脑（OC）相关控制。[^1]（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/36)）
+* 加入了ME缓存指令器（ME Level Maintainer），用于让ME网络中某个物品保持在一定数量之内。支持开放式电脑（OC）相关控制。[^1]（by asdflj [相关pr1](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/36) [相关pr2](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/41)）
 * 大大提高了ME-IO端口输入/输出ME流体元件中流体的速度。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/36)）
 * 可以将物品拖到AE2FC终端顶部搜索栏上，自动用物品名填充搜索栏（与原版AE2相同）。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/36)）
 * AE2FC终端顶部搜索栏现在支持NEI搜索历史（需要将搜索模式调为NEI同步，使用Ctrl+鼠标滚轮调整历史条目）。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/36)）
 * 修复了ME流体样板终端中Shift+鼠标左键双倍样板输入/输出对流体包不生效的bug。（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/36)）
 * 修复了格雷化（魔改）的AE2FC流体元件合成配方失效的bug。（by OneEyeMaker [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/37)）
+* 在ME流体封包解码器中加入了限制输入流体的槽位（by asdflj [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/39)）
+* 为ME二合一接口加入了OC（开放式电脑）相关的API。（by GlodBlock [相关pr1](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/40) [相关pr2](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/42)）
+* 修复了当样板只含有流体时，二合一接口阻挡模式不生效的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/38)）
+* 禁止流体样板终端在合成模式下更改样板中物品数量。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/38)）
 
 [^1]: 源自懒人AE2（Lazy AE2）。
 
@@ -35,7 +39,7 @@
 [^2]: 例如编写样板：4橡木木板+4燧石→1工作台，开启“启用替换”功能，此时ME网络内没有任何种类的木板，但是有白桦木原木，同时也有1白桦木原木→4白桦木木板的合成样板。此时进行合成时，终端便会使用白桦木原木合成白桦木木板，再合成工作台。此前终端只会调取网络内已有的同矿辞物品，不够时不会请求合成。
 
 ### Bartworks
-* 版本号：0.5.90 → 0.5.111
+* 版本号：0.5.90 → 0.5.116-pre
 * 修复了细菌培养缸内部显示的流体方块没有lang key的问题。（by Quarri6343 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/209)）
 * 修复了极限工业温室不支持多输入仓供水的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/210)）
 * 提高了极限工业温室设置模式的输入速度。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/210)）
@@ -60,6 +64,8 @@
 * 修复了LuV部分使用到铂线材料的配方生成错误的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/bartworks/pull/234)）
 * 修复了氯化钙流体产出钙过多的问题，将1000mB氯化钙→3氯化钙粉改为1000mB氯化钙→1氯化钙粉。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/bartworks/pull/236)）
 * 修复了电路装配线和风车结构判定相关的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/237)）
+* 修复了极限工业温室可能导致玩家物品栏崩坏的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/235)）
+* 修复了巨型石油裂化机的自动放置问题。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/238)）
 
 [^3]: 批处理模式可以为配方加上一个由输入原料量决定的并行系数，这个系数最大为128。最终的输入、输出为原最大并行量\*并行系数，同时配方处理时间也为原时间\*并行系数。批处理模式可以极大降低处理阵列造成的延迟，但不会增加其生产效率。
 [^4]: 因为UHV+的线缆和线缆二极管配方在GTNewHorizonsCoreMod中定义，在Bartworks中不限制可能会导致配方问题。
@@ -116,8 +122,9 @@
 * 回退着色器版本，修复了MacOS的兼容性问题。（by LionZXY [相关pr](https://github.com/GTNewHorizons/Eternal-Singularity/pull/2)）
 
 ### ExtraCells2
-* 版本号：2.5.24 → 2.5.25
+* 版本号：2.5.24 → 2.5.27
 * 使EC2的网络部件和AE2部件采取一致的渲染方式。（by dipo33 [相关pr](https://github.com/GTNewHorizons/ExtraCells2/pull/71)）
+* 使EC2流体发信器、流体输入/输出总线支持NEI幽灵物品拖放标记。（by asdflj [相关pr](https://github.com/GTNewHorizons/ExtraCells2/pull/73)）
 
 ### ForestryMC（林业）
 * 版本号：4.4.16 → 4.5.6
@@ -132,16 +139,18 @@
 [^6]: $x$为基础产出概率，$s$为蜜蜂速度，$p$为生产加速，$t$为不同蜂箱的修正系数，$P$为最终产出概率。
 
 ### Galacticraft（星系）
-* 版本号：3.0.45-GTNH → 3.0.47-GTNH
+* 版本号：3.0.45-GTNH → 3.0.52-GTNH-pre
 * 在配置文件中添加"Enable Oxygen Tank Hand fill"（启用手动填装氧气罐）条目，启用后可以直接用GC的罐装液态氧和氧气罐合成得到满的氧气罐。（by Glease [相关pr](https://github.com/GTNewHorizons/Galacticraft/pull/55)）
 * 修复了玩家提前跳下登陆舱会导致无法打开着陆气球的bug。（by glowredman [相关pr](https://github.com/GTNewHorizons/Galacticraft/pull/57)）
+* 修复了星系服装会跨存档渲染的bug。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/Galacticraft/pull/59)）
+* 更新build script，使用GTNHMixins，并且精简了代码。（by glowredman [相关pr](https://github.com/GTNewHorizons/Galacticraft/pull/58)）
 
 ### GalaxySpace
 * 版本号：1.1.16p-GTNH → 1.1.19-GTNH
 * **不要问我更新了什么，我不知道**
 
 ### GoodGenerator
-* 版本号：0.4.33 → 0.4.48
+* 版本号：0.4.33 → 0.4.56
 * 多方块自动放置功能完善。[^7]（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/83)）
 * 修复了热大力合金锭没有真空冷冻机处理配方的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/90)）
 * 修复了之前更新导致的中子活化器结构检测失败的问题。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/92)）
@@ -171,13 +180,22 @@
 * YOT储罐现在支持流体探测覆盖板。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/101)）
 * YOT储罐加入开关溢出销毁选项。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/100)）
 * YOT储罐不再需要维护仓。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/104)）
-* 配平了氢氧化镓粉与钠粉反应的配方消耗和产出的钠数量。
+* 配平了氢氧化镓粉与钠粉反应的配方消耗和产出的钠数量。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/105)）
+* 允许精密自动组装机超过MAX功率超频。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/106)）
+* 枯竭钍基流体燃料离心配方产出32个镨粉的概率从10%改为100%。（by querns [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/107)）
+* 加入了部件装配线（Component Assembly Line）多方块结构。（by MadMan310 [相关pr](https://github.com/GTNewHorizons/GoodGenerator/pull/102)）详细内容如下：
+  * 定位为UV+机器。
+  * 该多方块结构可以大批量高效制造LV~UMV的基础部件（例如电动马达、电动泵、电动活塞等等），旨在提高后期基础部件产能，腾出装配线空间。
+  * 所有配方都是自动生成的，输入48倍原料，输出64倍产物。部分原料会转换成流体、多倍线缆、致密板形式。
+  * 机器能制造的部件等级受结构顶部的部件装配线机械方块限制，机械方块有LV~MAX等级，需要用对应等级的部件、电路板、材料合成。
+  * 支持超过MAX的超频。
+  * 支持TecTech激光仓和多安能源仓。
 
 [^7]: 包括：压缩核聚变反应堆、精密自动组装机、冷却塔、大型源质发电机、大型源质冶炼厂、大型硅岩反应堆、中子活化器、硅岩燃料精炼厂、通用化学能引擎、YOT储罐、极限热交换机。
 [^8]: 例如：ME流体存储总线接YOT仓时，以前最多只能读取int long (2^31) mB的流体，现在可以读到最多max long (2^62) mB。
 
 ### GT5 Unofficial（格雷科技）
-* 版本号：5.09.41.74 → 5.09.41.150-pre
+* 版本号：5.09.41.74 → 5.09.41.151-pre
 * 凛冰蜂主产出改为暴雪蜂窝，概率15%，离心产出暴雪棒，特殊产物凛冰蜂窝概率从15%改为20%。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1443)）
 * 破坏超级缸时，只保留流体种类和存量这两个必要信息，不保留超级缸的设置模式。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1448)）
 * 允许使用胶带直接右键维护仓维护机器，不需要打开GUI。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1451)）
@@ -266,6 +284,9 @@
 * 加入了聚苯并咪唑管道方块、高级过滤机械方块、核能之星（Nuclear Star），用于部件装配线（Component Assembly Line）的结构方块和处理配方。[^12]（by MadMan310 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1524)）
 * 修复了使用存储输入总线（ME）的机器开启配方锁定会导致原料不消耗的bug。（by repo-alt [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1526)）
 * 允许自定义NEI和基础机器界面中的GregTech图标。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1525)）
+* 将ModularUI的功能移动至底层代码。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1510)）
+* Nerf了甲烷加水在化学反应釜中生成氢的配方，现在原料需要使用蒸馏水，并且基础配方时间从8.75秒增加到10秒。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1525)）
+* WAILA支持显示方块上的所有覆盖板信息。（by miozune [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1527)）
 
 [^9]: 指GT单方块机器“泵”，不是电动泵覆盖板。
 [^10]: 见ForestryMC（林业）更新部分。
@@ -277,7 +298,7 @@
 * 版本号：1.0.17 → 1.0.18
 * 更新了由@Jimbno提供的新材质。（by miozune [相关pr](https://github.com/GTNewHorizons/GTNEIOrePlugin/pull/23)）
 
-### GTNH Lanthanides（镧系）
+### GTNH Lanthanides
 * 版本号：0.9.18 → 0.9.20
 * 加入了一系列流体的本地化key。（by ArtherCasan [相关pr](https://github.com/GTNewHorizons/GTNH-Lanthanides/pull/39)）
 * 修正了配方中的单元数量平衡。（by miozune [相关pr](https://github.com/GTNewHorizons/GTNH-Lanthanides/pull/40)）
@@ -290,7 +311,7 @@
 * 版本号：2.0.2（新Mod）
 
 ### GTplusplus（GT++）
-* 版本号：1.7.118-pre → 1.7.142-pre
+* 版本号：1.7.118-pre → 1.7.149-pre
 * 将化工厂定位为MV可制作，并且统一制作材料为MV级别。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/396)）
 * 回退了对无菌农场机械方块造价的nerf，并且调整藻类农场控制器方块的造价为MV级别。（by Steelux8 [相关pr1](https://github.com/GTNewHorizons/GTplusplus/pull/397) [相关pr2](https://github.com/GTNewHorizons/GTplusplus/pull/402)）
 * 将无尽突变催化剂配方的输出从1调整为5，以匹配输入消耗的5个催化剂外壳。（by Steelux8 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/398)）
@@ -315,6 +336,9 @@
 * 修复了部分GT++材料在锻造锤配方中不是3锭→2板的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/438)）
 * 移除了涡轮材质的反射。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/439)）
 * 用`static`修饰所有结构定义field。（by Glease [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/443)）
+* 使用ModularUI重写了GUI。（by miozune [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/440)）
+* 修复了反应堆燃料精炼厂GUI材质缺失的问题。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/447)）
+* 在XL涡轮的tooltip中加入了需求30个涡轮轴方块的描述。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/GTplusplus/pull/448)）
 
 [^14]: 见GT5 Unofficial（格雷科技）更新部分。
 
@@ -322,7 +346,7 @@
 * **未知更新**
 
 ### Hodgepodge
-* 版本号：1.7.37 → 2.0.7-pre
+* 版本号：1.7.37 → 2.0.8
 * 将ModMixins重新并入Hodgepodge。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/134)）
 * 加快了`World.updateEntites`移除方块实体的速度，修复了某些情况下区块重载会导致方块实体停止工作的bug。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/133)）
 * 修复了未启用fastcraft时，Opis在服务器中默认启用，产生延迟的问题。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/133)）
@@ -341,6 +365,7 @@
 * 加入了在CurseForge上使用的可选Mod依赖列表。（by glowredman [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/139)）
 * 修复了未安装NEI时，`fixPotionEffectRender`会导致游戏崩溃的bug。并且正确地将该修复应用于原版NEI和GTNH版NEI。（by makamys [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/142)）
 * 修复了兼容类会导致服务端崩溃的bug。（by makamys [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/144)）
+* 修复了原版中玩家的某些声音被注册为友好生物的bug。（by Cleptomania [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/143)）
 
 ### HoloInventory
 * 版本号：2.1.17-GTNH → 2.1.18-GTNH
@@ -387,10 +412,11 @@
 * 在检测结构前重置结构相关变量，修复了需要重新放置主方块才能更改结构的bug。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/KekzTech/pull/48)）
 
 ### KubaTech
-* 版本号：0.5.11 → 0.6.4
+* 版本号：0.5.11 → 0.6.5-pre
 * 禁止工业屠宰场主方块任意旋转（by kuba6000 [相关pr](https://github.com/GTNewHorizons/KubaTech/pull/27)）
-* 加入了巨型工业蜂箱/繁殖站（Industrial Apicultural Acclimatiser and Drone Domestication Station，简称Mega Apiary）[^15]。旨在为后期提供更高效率的蜜蜂生产方案。（by kuba6000 [相关pr1](https://github.com/GTNewHorizons/KubaTech/pull/26) [相关pr2](https://github.com/GTNewHorizons/KubaTech/pull/28) [相关pr3](https://github.com/GTNewHorizons/KubaTech/pull/29) [相关pr4](https://github.com/GTNewHorizons/KubaTech/pull/31)）
+* 加入了巨型工业蜂箱/繁殖站（Industrial Apicultural Acclimatiser and Drone Domestication Station，简称Mega Apiary）多方块结构[^15]。（by kuba6000 [相关pr1](https://github.com/GTNewHorizons/KubaTech/pull/26) [相关pr2](https://github.com/GTNewHorizons/KubaTech/pull/28) [相关pr3](https://github.com/GTNewHorizons/KubaTech/pull/29) [相关pr4](https://github.com/GTNewHorizons/KubaTech/pull/31)）详细内容如下：
   * 定位为UV+机器。
+  * 旨在为后期提供更高效率的蜜蜂生产方案。
   * 该机器有三种运行模式：输入模式、输出模式、工作模式。这三种模式的切换和用途与极限工业温室类似。
   * 工作模式分为两种子模式：普通(Normal)模式和蜂群(Swarmer)模式。
     * 普通模式下：是工业蜂箱的多方块升级版。每只蜂后消耗1A LuV。单次运行时间5秒。自带64倍加速、8倍产出升级、基因稳定升级，并且会模拟蜜蜂生长的最佳环境。可以提供蜂王浆提高产出，每个蜂王浆增加每次运行每只蜜蜂5%产出，最大加成200%。
@@ -414,7 +440,7 @@
 * 加快了力场控制器的冷却速度。（by MadMan310 [相关pr1](https://github.com/GTNewHorizons/MalisisDoors/pull/4)）
 
 ### ModularUI
-* 版本号：1.0.20（新Mod）
+* 版本号：1.0.22（新Mod）
 * 是1.12.2 ModularUI的向下移植版。ModularUI是一个GUI库，源于GTCE，可以简化创建GUI的过程。需要GTNHMixins做前置。更多详见GT5u等Mod的更新内容。
 
 ### MouseTweaks（鼠标手势）
@@ -427,7 +453,7 @@
 * 使NEIAddons不会为每个`AEBaseGui`的子类添加默认的handler。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/neiaddons/pull/6)）
 
 ### NewHorizonsCoreMod
-* 版本号：1.9.83 → 1.9.107
+* 版本号：1.9.83 → 1.9.109
 * 在高阶电路配方中使用贴片电感替代小型线圈。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/424)）
 * 加入了贴片电感、进阶贴片电感、光学贴片电感的合成配方。（by Dream-Master [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/425)）
 * 将蜂箱升级的合成配方移动至CoreMod中。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/429)）
@@ -449,13 +475,15 @@
 * 将ME流体存储组件合成ME流体存储元件的配方格雷化。（by OneEyeMaker [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/445)）
 * 加入UMV变压器的合成配方。（by BlueWeabo [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/446)）
 * 使用ModularUI重写了GUI。（by miozune [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/447)）
+* 有full-hazmat-protection（危害防护）效果的装备现在可以保护玩家不受自定义效果（如手持污染物桶）的影响。（by miozune [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/448)）
+* 修复了酿造室中用蜂蜜制造生物质配方需求无法合成的蜂蜜的问题。（by chochem [相关pr](https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/449)）
 
 ### NotEnoughEnergistics
 * 版本号：1.3.21 → 1.3.23
 * 使流体样板终端支持优先级调整模式。（即可以切换同矿辞物品）（by asdflj [相关pr](https://github.com/GTNewHorizons/NotEnoughEnergistics/pull/23)）
 
 ### NotEnoughItems
-* 版本号：2.3.7-GTNH → 2.3.15-GTNH
+* 版本号：2.3.7-GTNH → 2.3.16-GTNH
 * 在AE2压印器配方可用机器中加入了AE2 Stuff的高级压印器。（by miozune [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/306)）
 * 删除了书签物品重排动画，禁用了相关功能，修复了从NEI书签将物品拖入样板终端时崩溃的bug。（by slprime [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/307)）
 * 修复了用Ctrl+Shift+A收藏输出单种物品大于64个的配方时，无法正确收藏输出物品数量的bug。（by slprime [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/308)）
@@ -465,6 +493,7 @@
 * 只有物品列表真的被修改时，才会将其标记为`dirty`。修复了当安装GT6时，每次打开物品栏，NEI物品列表都会重载的bug。（by makamys [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/316)）
 * 修复了单方块硅岩发电机NEI配方左侧的可用机器显示不准确的问题。（by miozune [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/318)）
 * 将丹格特蒸馏塔加入了NEI蒸馏室配方左侧的可用机器中。（by miozune [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/319)）
+* 修复了NEI部分配方页面（例如木工机）中，“？”图标被配方显示覆盖的bug。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/NotEnoughItems/pull/321)）
 
 ### NotEnoughIDs
 * 版本号：1.4.3.4 → 1.4.4
