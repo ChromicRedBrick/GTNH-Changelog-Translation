@@ -124,7 +124,7 @@
 * 无尽、海珀珍、永恒三种线圈的任务增加了大量传说风格的叙述文本。（by Steelux8 [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11576 相关pr]）
 * 修复了水晶缠绕宇宙中子法杖无法合成的bug。（by wohaopa [https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/pull/11515 相关pr]）
 
-== 2.2.3至今（11.29） ==
+== 2.2.3至今（11.30） ==
 
 === Mod文件变动 ===
 * 待填
