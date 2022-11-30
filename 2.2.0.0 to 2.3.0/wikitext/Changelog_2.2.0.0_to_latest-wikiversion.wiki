@@ -131,7 +131,7 @@
 
 === Mod更新 ===
 ==== AppleCore ====
-* 修复了和平模式下饱食度不会减少的bug。（by [https://github.com/GTNewHorizons/AppleCore/pull/19 相关pr]）
+* 修复了和平模式下饱食度不会减少的bug。（by wlhlm [https://github.com/GTNewHorizons/AppleCore/pull/19 相关pr]）
 ==== AE2FluidCraft Rework（AE2FC） ====
 * 修复了ME增广流体样板终端保存8种物品输出的配方会出现错误的bug。（by GlodBlock [https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/25 相关pr]）
 * 修复了极端情况下流体样板编码可能会导致ArrayIndexOutOfBoundsException的bug。（by GlodBlock [https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/26 相关pr]）
