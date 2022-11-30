@@ -26,8 +26,12 @@
 
 [^1]: 源自懒人AE2（Lazy AE2）。
 
+### AppleCore
+* 版本号：3.2.2 → 3.2.3
+* 修复了和平模式下饱食度不会减少的bug。（by [相关pr](https://github.com/GTNewHorizons/AppleCore/pull/19)）
+
 ### Applied Energistics 2 Unofficial（AE2）
-* 版本号：rv3-beta-111-GTNH → rv3-beta-118-GTNH
+* 版本号：rv3-beta-111-GTNH → rv3-beta-120-GTNH
 * 改善了禁用频道时ME网络的性能表现。（by xyqyear [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/190)）
 * 如果config禁用了充能赛特斯石英矿石的生成，那么NEI不会再显示"可以在世界中找到充能赛特斯石英"相关的信息。（即：GTNH中，NEI不会再显示"可以在世界中找到充能赛特斯石英"）（by miozune [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/191)）
 * 撤回了之前对于压印器配方的更改（将其移动到整合包设置文件中），修复了在GTNH之外压印器配方丢失的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/192)）
@@ -35,11 +39,16 @@
 * 修复了在合成模拟界面取消涉及到奥术合成终端的合成会导致游戏崩溃的bug。（by greesyB [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/194)）
 * 开启“启用替换”选项时，可以请求合成配方所需物品的同矿辞物品。[^2]（by eigenraven [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/195)）
 * 进一步完善格式化数字文本。（by Connor-Colenso [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/197)）
+* 重构了AE2陨石的生成代码，使用基于网格的系统生成陨石，提高了生成的一致性、确定性。（by eigenraven [相关pr](https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/200)）
 
 [^2]: 例如编写样板：4橡木木板+4燧石→1工作台，开启“启用替换”功能，此时ME网络内没有任何种类的木板，但是有白桦木原木，同时也有1白桦木原木→4白桦木木板的合成样板。此时进行合成时，终端便会使用白桦木原木合成白桦木木板，再合成工作台。此前终端只会调取网络内已有的同矿辞物品，不够时不会请求合成。
 
+### Avaritia
+* 版本号：1.30 → 1.31
+* 将着色器版本由130改为120，以兼容MacOS。（by LionZXY [相关pr](https://github.com/GTNewHorizons/Avaritia/pull/24)）
+
 ### Bartworks
-* 版本号：0.5.90 → 0.5.116-pre
+* 版本号：0.5.90 → 0.5.117-pre
 * 修复了细菌培养缸内部显示的流体方块没有lang key的问题。（by Quarri6343 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/209)）
 * 修复了极限工业温室不支持多输入仓供水的bug。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/210)）
 * 提高了极限工业温室设置模式的输入速度。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/bartworks/pull/210)）
@@ -93,7 +102,19 @@
 
 ### Botania（植物魔法）
 * 版本号：1.9.10-GTNH → 1.9.11-GTNH
-* 修复了ManaNetworkHandler的一个内存泄漏问题。（by Glease [相关pr](https://github.com/GTNewHorizons/Botania/pull/18)）
+* 修复了`ManaNetworkHandler`的一个内存泄漏问题。（by Glease [相关pr](https://github.com/GTNewHorizons/Botania/pull/18)）
+
+### BugTorch
+* 版本号：1.1.6.4-GTNH → 1.1.6.5-GTNH
+* “让鱿鱼再次伟大”：鱿鱼现在可以发出声音并且喷出墨汁。（by Minepolz320 [相关pr](https://github.com/GTNewHorizons/BugTorch/pull/11)）
+
+### BuildCraft（建筑）
+* 版本号：7.1.27 → 7.1.28
+* 同步源Mod更新，修复部分bug。（by Dream-Master & asiekierka [相关pr](https://github.com/GTNewHorizons/BuildCraft/pull/8)）
+
+### Computronics
+* 版本号：1.6.16-GTNH → 1.6.17-GTNH
+* 添加了一个getName()函数，可以获取通过适配器连接的GT机器的实体名称。（by kraetzin [相关pr](https://github.com/GTNewHorizons/Computronics/pull/19)）
 
 ### Crops plus plus
 * 版本号：1.3.6.4 → 1.3.6.8
@@ -146,9 +167,28 @@
 * 修复了星系服装会跨存档渲染的bug。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/Galacticraft/pull/59)）
 * 更新build script，使用GTNHMixins，并且精简了代码。（by glowredman [相关pr](https://github.com/GTNewHorizons/Galacticraft/pull/58)）
 
-### GalaxySpace
+### GalaxySpace（星空）[^18]
 * 版本号：1.1.16p-GTNH → 1.1.19-GTNH
-* **不要问我更新了什么，我不知道**
+* 加入了太空电梯（Space Elevator）多方块结构。（by minecraft7771 [相关pr1](https://github.com/GTNewHorizons/Galaxy-Space-GTNH/pull/47) [相关pr2](https://github.com/GTNewHorizons/Galaxy-Space-GTNH/pull/51)）详细内容如下：
+  * 定位为UV+机器。
+  * 该多方块结构有12个模块“槽位”，位于机器主体周围。一共可以安装三种模块：太空采矿模块（Space Mining Module）、太空泵模块（Space Pumping Module）、太空组装机模块（Space Assembler Module）。
+  * 机器的所有模块都可以由太空电梯主机供电，只需在太空电梯中心部分安装能源仓。
+  * 太空电梯结构中的太空电梯马达方块有三个等级，该方块等级限制了能安装模块的最高等级。
+  * 太空采矿模块可以部分取代虚空采矿场的功能，能够极大批量产出特定种类矿物。该模块有三个等级，分别需要UV、UHV、UEV阶段才能制造，且需要至少对应等级的太空电梯马达方块才能工作，并行分别为2、4、8。工作时，需要在输入总线中放入一个采矿无人机（不会消耗），该无人机共有10个等级，每个等级都能处理特定的几种配方。输入算力、特定材料的长杆和钻头（每份配方消耗4个长杆和4个钻头）以及等离子体（每份配方1000L氦等离子体/500L铋等离子体/300L氡等离子体，这三种等离子体提供的产出依次增多），即可产出矿物。产出受太空采矿模块等级、无人机等级、提供的等离子体和采矿模块的“距离”参数影响。所有产出的矿物均为末地版本。通过NEI可以查询太空采矿模块所能处理的所有配方。
+  * 太空泵模块可以部分取代无尽油气流体钻机和行星气体钻机的功能，能够极大量地产出特定流体。目前该模块只有一个等级，需要UHV阶段才能制造，且需要太空电梯马达方块MK-II才能工作。工作时，需要在模块主方块中放入一个4阶以上的火箭控制电脑，不同等级的火箭控制电脑可以钻取不同种类的流体。通过参数仪可以调配钻取流体的编号。例如4阶火箭控制电脑可以钻取两种流体：编号1为硫酸，784000L/次；编号2为熔融铁，896000L/次。模块工作功率约1A UHV，每次工作耗时1秒。该机器的配方规则为：一种流体在所有星球中的最大生成量决定配方的产量，其最大生成量对应的星球决定需求火箭控制电脑的等级。
+  * 太空组装机模块尚未实装。
+* 将戴森球地面单元重新定位为UIV中期才能制造。（by POPlol333 [相关pr](https://github.com/GTNewHorizons/Galaxy-Space-GTNH/pull/45)）
+* 戴森球地面单元大幅改动。（by Phineasor [相关pr](https://github.com/GTNewHorizons/Galaxy-Space-GTNH/pull/46)）
+  * 更改了戴森球模块消耗的消耗函数。
+  * 每个戴森球模块发电量为10,000,000 EU/t。
+  * 最大工作模块数量为10,000，因此戴森球地面单元最大输出为100,000,000,000 EU/t。
+  * 最大每秒接收算力为1,000,000。
+  * 机器的配方时间改为1小时，模块以对应速率消耗（一次消耗1组）。这样需要约7天才能达到最大输出。
+  * 调整了tooltip以和更改内容匹配。
+
+### Gendustry（基因工业）
+* 版本号：1.6.5.4-GTNH → 1.6.5.5-GTNH
+* 在NEI中隐藏了已经从Mod中移除的蜂箱升级物品，并且在其tooltip中加入了提示。（by kuba6000 [相关pr](https://github.com/GTNewHorizons/gendustry/pull/6)）
 
 ### GoodGenerator
 * 版本号：0.4.33 → 0.4.56
@@ -196,7 +236,7 @@
 [^8]: 例如：ME流体存储总线接YOT仓时，以前最多只能读取int long (2^31) mB的流体，现在可以读到最多max long (2^62) mB。
 
 ### GT5 Unofficial（格雷科技）
-* 版本号：5.09.41.74 → 5.09.41.151-pre
+* 版本号：5.09.41.74 → 5.09.41.152-pre
 * 凛冰蜂主产出改为暴雪蜂窝，概率15%，离心产出暴雪棒，特殊产物凛冰蜂窝概率从15%改为20%。（by Runakai1 [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1443)）
 * 破坏超级缸时，只保留流体种类和存量这两个必要信息，不保留超级缸的设置模式。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1448)）
 * 允许使用胶带直接右键维护仓维护机器，不需要打开GUI。（by Glease [相关pr](https://github.com/GTNewHorizons/GT5-Unofficial/pull/1451)）
@@ -343,11 +383,17 @@
 
 [^14]: 见GT5 Unofficial（格雷科技）更新部分。
 
-### HarvestCraft（潘马斯）
-* **未知更新**
+### HarvestCraft（潘马斯）[^18]
+* 版本号：1.0.15-GTNH → 1.0.18-GTNH
+* 修复了世界中不会生成李子树的bug。（by wlhlm [相关pr](https://github.com/GTNewHorizons/harvestcraft/pull/37)）
+* 修复了世界中不会生成香草树的bug。（by wlhlm [相关pr](https://github.com/GTNewHorizons/harvestcraft/pull/38)）
+* 修复拼写错误：Parmasan → Parmesan。（by glowredman [相关pr](https://github.com/GTNewHorizons/harvestcraft/pull/39)）
+* 修复了羊肉和鱿鱼肉掉落几率过低，并且未考虑抢夺附魔的问题。（by wlhlm [相关pr](https://github.com/GTNewHorizons/harvestcraft/pull/40)）
+
+[^18]: 该Mod的GitHub仓库仅开发者可见，相关pr链接可能无法访问。
 
 ### Hodgepodge
-* 版本号：1.7.37 → 2.0.8
+* 版本号：1.7.37 → 2.0.10
 * 将ModMixins重新并入Hodgepodge。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/134)）
 * 加快了`World.updateEntites`移除方块实体的速度，修复了某些情况下区块重载会导致方块实体停止工作的bug。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/133)）
 * 修复了未启用fastcraft时，Opis在服务器中默认启用，产生延迟的问题。（by mitchej123 [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/133)）
@@ -367,10 +413,13 @@
 * 修复了未安装NEI时，`fixPotionEffectRender`会导致游戏崩溃的bug。并且正确地将该修复应用于原版NEI和GTNH版NEI。（by makamys [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/142)）
 * 修复了兼容类会导致服务端崩溃的bug。（by makamys [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/144)）
 * 修复了原版中玩家的某些声音被注册为友好生物的bug。（by Cleptomania [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/143)）
+* 在应用GT的污染API之前，先检查GT5是否被加载，以解决整合包中没有GT5时，使用熔炉导致的游戏崩溃。（by makamys [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/146)）
+* 只在GT5被加载时，才会应用`fixIC2Hazmat`，以解决整合包中没有GT5时游戏崩溃的问题。（by makamys [相关pr](https://github.com/GTNewHorizons/Hodgepodge/pull/145)）
 
 ### HoloInventory
-* 版本号：2.1.17-GTNH → 2.1.18-GTNH
+* 版本号：2.1.17-GTNH → 2.1.19-GTNH
 * 修复了安装了OptiFine时，全息眼镜在特定角度下不会显示抽屉内容物的bug。（by Glease [相关pr](https://github.com/GTNewHorizons/HoloInventory/pull/29)）
+* 修复了戴着全息眼镜面对有无效样板的ME接口时会触发服务端产生大量stacktrace log的问题。（by repo-alt [相关pr](https://github.com/GTNewHorizons/HoloInventory/pull/30)）
 
 ### HydroEnergy
 * 版本号：1.0.13 → 1.0.14
@@ -385,7 +434,7 @@
 * 防止`onAttack`在反射伤害中触发，以避免攻击怪物会导致玩家被反射造成凋零和反胃状态。（by Glease [相关pr](https://github.com/GTNewHorizons/Infernal-Mobs/pull/12)）
 
 ### KekzTech
-* 版本号：0.6.15 → 0.6.16
+* 版本号：0.6.16 → 0.6.22
 * 修复了[最近的更改](https://github.com/GTNewHorizons/KekzTech/pull/43)导致进入存档崩溃的bug。（by miozune [相关pr](https://github.com/GTNewHorizons/KekzTech/pull/44)）
 * 完全重做TFFT。（by DianeXD [相关pr1](https://github.com/GTNewHorizons/KekzTech/pull/45) [相关pr2](https://github.com/GTNewHorizons/KekzTech/pull/47)）详细内容如下：
   * 完善了多方块结构全息投影仪以及自动放置支持。
@@ -441,7 +490,7 @@
 * 加快了力场控制器的冷却速度。（by MadMan310 [相关pr1](https://github.com/GTNewHorizons/MalisisDoors/pull/4)）
 
 ### ModularUI
-* 版本号：1.0.22（新Mod）
+* 版本号：1.0.23（新Mod）
 * 是1.12.2 ModularUI的向下移植版。ModularUI是一个GUI库，源于GTCE，可以简化创建GUI的过程。需要GTNHMixins做前置。更多详见GT5u等Mod的更新内容。
 
 ### MouseTweaks（鼠标手势）
