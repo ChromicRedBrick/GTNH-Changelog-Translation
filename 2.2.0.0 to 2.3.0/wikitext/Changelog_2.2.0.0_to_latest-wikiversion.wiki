@@ -506,7 +506,7 @@
 * 移除了配方中的所有0号电路板。（by miozune [https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/431 相关pr]）
 * 移除了氧化锌的高炉配方，用焙烧锌取代。（by miozune [https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/433 相关pr]）
 * 将蜂箱升级配方中的毒藤换成仙人掌。（by Runakai1 [https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/434 相关pr]）
-* 加入了输入仓（ME）<ref>见GT5 Unofficial（格雷科技）更新部分。</ref>的配方。（by GlodBlock [https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/435 相关pr]）
+* 加入了输出仓（ME）<ref>见GT5 Unofficial（格雷科技）更新部分。</ref>的配方。（by GlodBlock [https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/435 相关pr]）
 * 加入了使用UEV+超导制作超导线圈方块的配方。（by GlodBlock [https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/435 相关pr]）
 * 加入了使用电路组装机制造TPS卡的配方。（by POPlol333 [https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/436 相关pr]）
 * 粗制超立方体的较低级DTPF配方需求线圈从海珀珍降为无尽。（by POPlol333 [https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/438 相关pr]）
