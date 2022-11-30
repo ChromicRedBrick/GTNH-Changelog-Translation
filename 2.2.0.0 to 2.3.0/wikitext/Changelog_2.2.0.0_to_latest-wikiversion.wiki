@@ -163,9 +163,7 @@
 * 提高了极限工业温室设置模式的输入速度。（by kuba6000 [https://github.com/GTNewHorizons/bartworks/pull/210 相关pr]）
 * 加入了封装贴片电感的合成配方。（by GlodBlock [https://github.com/GTNewHorizons/bartworks/pull/212 相关pr]）
 * 加入了Bartworks材料的箔形式。（by GlodBlock [https://github.com/GTNewHorizons/bartworks/pull/213 相关pr]）
-* 修复了风车并行数计算错误导致的物品复制bug。（by iouter [https://github.com/GTNewHorizons/bartworks/pull/214 相关pr]）
 * 将合成配方中使用的0号电路板改为1号。（by miozune [https://github.com/GTNewHorizons/bartworks/pull/215 相关pr]）
-* 修复了[https://github.com/GTNewHorizons/bartworks/pull/210 pr#210]意外导致的物品复制bug。（by kuba6000 [https://github.com/GTNewHorizons/bartworks/pull/216 相关pr]）
 * 修复了风车输出物品没有正确分割的bug。（by iouter [https://github.com/GTNewHorizons/bartworks/pull/217 相关pr]）
 * 加入了使用电动聚爆压缩机制造浓缩铀、钍、钚的新配方。（by GDCloudstrike [https://github.com/GTNewHorizons/bartworks/pull/218 相关pr]）
 * 修复了电路元件矿辞化导致部分电路装配线配方（主要是集成逻辑电路）无法生成的bug。（by miozune [https://github.com/GTNewHorizons/bartworks/pull/219 相关pr]）
