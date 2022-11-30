@@ -179,7 +179,7 @@
   * 太空组装机模块尚未实装。
 * 将戴森球地面单元重新定位为UIV中期才能制造。（by POPlol333 [相关pr](https://github.com/GTNewHorizons/Galaxy-Space-GTNH/pull/45)）
 * 戴森球地面单元大幅改动。（by Phineasor [相关pr](https://github.com/GTNewHorizons/Galaxy-Space-GTNH/pull/46)）
-  * 更改了戴森球模块消耗的消耗函数。
+  * 更改了戴森球模块消耗的函数。
   * 每个戴森球模块发电量为10,000,000 EU/t。
   * 最大工作模块数量为10,000，因此戴森球地面单元最大输出为100,000,000,000 EU/t。
   * 最大每秒接收算力为1,000,000。
