@@ -28,7 +28,7 @@
 
 ### AppleCore
 * 版本号：3.2.2 → 3.2.3
-* 修复了和平模式下饱食度不会减少的bug。（by [相关pr](https://github.com/GTNewHorizons/AppleCore/pull/19)）
+* 修复了和平模式下饱食度不会减少的bug。（by wlhlm [相关pr](https://github.com/GTNewHorizons/AppleCore/pull/19)）
 
 ### Applied Energistics 2 Unofficial（AE2）
 * 版本号：rv3-beta-111-GTNH → rv3-beta-120-GTNH
