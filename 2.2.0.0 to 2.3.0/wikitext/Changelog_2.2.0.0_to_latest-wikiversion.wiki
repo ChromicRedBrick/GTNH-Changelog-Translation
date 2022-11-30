@@ -555,7 +555,7 @@
 * 修复了末影流体覆盖板无法正确处理存储信息导致不断发送日志的bug。（by Glease [https://github.com/GTNewHorizons/TecTech/pull/107 相关pr]）
 * 移除了UHV部分部件的装配线配方需求的润滑油。（by GlodBlock [https://github.com/GTNewHorizons/TecTech/pull/110 相关pr]）
 * 修复了末影流体覆盖板可以跨存档传输流体的bug。（by minecraft7771 [https://github.com/GTNewHorizons/TecTech/pull/112 相关pr1] [https://github.com/GTNewHorizons/TecTech/pull/113 相关pr2]）
-* 加入了完整方块版本的光缆、激光真空管、量子隧道。（by minecraft7771 [https://github.com/GTNewHorizons/TecTech/pull/111 相关pr]）
+* 加入了完整方块版本的光缆、激光真空管、量子隧道，功能和用法与线缆版本完全相同。（by minecraft7771 [https://github.com/GTNewHorizons/TecTech/pull/111 相关pr]）
 * 使用ModularUI重写了GUI。（by miozune [https://github.com/GTNewHorizons/TecTech/pull/114 相关pr]）
 * 加入了UMV多安动力仓/能源仓和UIV/UMV激光仓的合成配方。（by BlueWeabo [https://github.com/GTNewHorizons/TecTech/pull/115 相关pr]）
 ==== ThaumicEnergistics（神秘能源） ====

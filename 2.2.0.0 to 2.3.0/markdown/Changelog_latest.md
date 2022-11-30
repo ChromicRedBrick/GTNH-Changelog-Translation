@@ -595,7 +595,7 @@
 * 对数据访问仓使用了新的API，解决了延迟问题。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/TecTech/pull/108)）
 * 移除了UHV部分部件的装配线配方需求的润滑油。（by GlodBlock [相关pr](https://github.com/GTNewHorizons/TecTech/pull/110)）
 * 修复了末影流体覆盖板可以跨存档传输流体的bug。（by minecraft7771 [相关pr1](https://github.com/GTNewHorizons/TecTech/pull/112) [相关pr2](https://github.com/GTNewHorizons/TecTech/pull/113)）
-* 加入了完整方块版本的光缆、激光真空管、量子隧道。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/TecTech/pull/111)）
+* 加入了完整方块版本的光缆、激光真空管、量子隧道，功能和用法与线缆版本完全相同。（by minecraft7771 [相关pr](https://github.com/GTNewHorizons/TecTech/pull/111)）
 * 使用ModularUI重写了GUI。（by miozune [相关pr](https://github.com/GTNewHorizons/TecTech/pull/114)）
 * 加入了UMV多安动力仓/能源仓和UIV/UMV激光仓的合成配方。（by BlueWeabo [相关pr](https://github.com/GTNewHorizons/TecTech/pull/115)）
 
